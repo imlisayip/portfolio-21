@@ -1,4 +1,9 @@
-# parcel-react-tailwindcss-template
+# Lisa Yip Porfolio 
+
+## Technologies 
+Parcel
+React 
+Tailwind 
 
 ## Usage
 
