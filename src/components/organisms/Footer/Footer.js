@@ -2,17 +2,17 @@ import React from "react";
 
 export default function Footer() {
     return (
-        <div>
+        <footer className="flex justify-between flex-col text-center sm:flex-row">
             {/* <span>imlisayip@gmail.com</span> */}
-            <span>made by Lisa Yip</span>
+            <span>imlisayip@gmail.com</span>
             <div>
-                <span>linkedin</span>
-                <span>instagram</span>
-                <button className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded ml-4 mt-4">
-                    Button
-                </button>
-
+                <a href="https://www.linkedin.com/in/imlisayip/">LinkedIn</a>
+                <span> • </span>
+                <a href="https://www.instagram.com/imlisayip/">Instagram</a>
+                <span> • </span>
+                {/* TODO: update resume link */}
+                <a href="#">Resume</a>
             </div>
-        </div>
+        </footer>
     );
 };
