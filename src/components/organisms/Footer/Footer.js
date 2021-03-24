@@ -2,16 +2,21 @@ import React from "react";
 
 export default function Footer() {
     return (
-        <footer className="flex justify-between flex-col text-center sm:flex-row">
-            {/* <span>imlisayip@gmail.com</span> */}
-            <span>imlisayip@gmail.com</span>
-            <div>
-                <a href="https://www.linkedin.com/in/imlisayip/">LinkedIn</a>
+        <footer className="flex justify-between items-center flex-col text-center sm:flex-row">
+            <div>imlisayip@gmail.com</div>
+            <div className="flex items-center">
+                <div className="p-4 hover:text-gray-800">
+                    <a href="https://www.linkedin.com/in/imlisayip/">LinkedIn</a>
+                </div>
                 <span> • </span>
-                <a href="https://www.instagram.com/imlisayip/">Instagram</a>
+                <div className="p-4 hover:text-gray-800">
+                    <a href="https://www.instagram.com/imlisayip/">Instagram</a>
+                </div>
                 <span> • </span>
                 {/* TODO: update resume link */}
-                <a href="#">Resume</a>
+                <div className="p-4 hover:text-gray-800">
+                    <a href="#">Resume</a>
+                </div>
             </div>
         </footer>
     );
