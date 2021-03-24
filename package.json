@@ -14,6 +14,7 @@
     "@types/react-dom": "^17.0.2",
     "react": "15.x || 16.x || 16.4.0-alpha.0911da3",
     "react-dom": "15.x || 16.x || 16.4.0-alpha.0911da3",
+    "react-instagram-authless-feed": "jamesmoriarty/react-instagram-authless-feed#v2.0.0",
     "tailwindcss": "^1.9.6",
     "typescript": "^4.2.3"
   },
