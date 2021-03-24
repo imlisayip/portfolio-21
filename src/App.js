@@ -1,16 +1,37 @@
+import React, { useState, useEffect } from "react";
 import { Router } from "@reach/router";
 
-import Nav from './components/organisms/Nav/Nav'
+import Navbar from './components/organisms/Navbar/Navbar'
+import Dropdown from './components/organisms/Dropdown/Dropdown'
 import Footer from './components/organisms/Footer/Footer'
 
 import About from './pages/About'
 import Work from './pages/Work'
 
 export function App() {
+  const [isOpen, setIsOpen] = useState(false)
+
+  const toggle = () => {
+    setIsOpen(!isOpen)
+  }
+
+  useEffect(() => {
+    const hideMenu = () => {
+      if (window.innerWidth > 640 && isOpen) {
+        setIsOpen(false)
+        console.log('i resized');
+      }
+    }
+    window.addEventListener('resize', hideMenu)
+    return () => {
+      window.removeEventListener('resize', hideMenu)
+    }
+  })
+
   return (
-    <div className="sm:m-10 sm:p-10 placeholder-blue-400">
-      <Nav />
-      {/* <h1 className="text-blue-600 text-xl">Hello, world!</h1> */}
+    <div className="m-6 p-6 bg-blue-200">
+      <Navbar isOpen={isOpen} toggle={toggle} />
+      <Dropdown isOpen={isOpen} toggle={toggle} />
       <Router>
         <Work path="/" />
         <About path="/about" />
