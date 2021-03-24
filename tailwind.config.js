@@ -2,7 +2,11 @@ module.exports = {
   future: {},
   purge: [],
   theme: {
-    extend: {}
+    extend: {
+      colors: {
+        cream: '#EFE7E2',
+      },
+    },
     extend: {
       fontFamily: {
         sans: ['gt-america-light', 'sans-serif'],

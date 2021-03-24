@@ -1,6 +1,5 @@
 import React from "react";
 import { Link } from "@reach/router";
-import Heading from '../../atoms/Heading/Heading'
 
 export default function Navbar({ isOpen, toggle }) {
     return (

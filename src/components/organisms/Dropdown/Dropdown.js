@@ -1,7 +1,6 @@
 import React from "react";
 import { Link } from "@reach/router";
 
-
 export default function Dropdown({ isOpen, toggle }) {
     return (
         <div

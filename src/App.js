@@ -29,7 +29,7 @@ export function App() {
   })
 
   return (
-    <div className="m-6 p-6 bg-blue-200">
+    <div className="m-6 p-6 bg-cream">
       <Navbar isOpen={isOpen} toggle={toggle} />
       <Dropdown isOpen={isOpen} toggle={toggle} />
       <Router>
