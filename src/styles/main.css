@@ -1,0 +1,28 @@
+@tailwind base;
+
+@tailwind components;
+
+
+@font-face {
+    font-family: 'canela-thin-web';
+    font-display: fallback;
+    src: local('canela-thin-web'), url(./fonts/canela-thin-web.woff) format('woff');
+    font-weight: 200;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'gt-america-light';
+    font-display: fallback;
+    src: local('gt-america-light'), url(./fonts/gt-america-light.woff) format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'gt-america-medium';
+    font-display: fallback;
+    src: local('gt-america-medium'), url(./fonts/gt-america-medium.woff) format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@tailwind utilities;
