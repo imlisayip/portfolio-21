@@ -3,8 +3,9 @@
   "version": "1.0.0",
   "description": "Minimal CodeSandbox template to use configurable Tailwind CSS with React v17",
   "scripts": {
-    "start": "parcel ./public/index.html",
-    "build": "parcel ./public/index.html"
+    "clean": "rm -rf dist .cache",
+    "build": "parcel ./public/index.html",
+    "start": "parcel ./public/index.html"
   },
   "dependencies": {
     "@reach/router": "^1.3.4",
