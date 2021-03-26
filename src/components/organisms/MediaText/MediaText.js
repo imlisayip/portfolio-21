@@ -21,7 +21,7 @@ export default function Hero({
                     <Image src={image} alt={alt} />
                 </div>
             )}
-            <div className={`md:px-4 md:w-4/12 ${direction ? '' : 'text-right'}`}>
+            <div className={`md:px-4 md:w-4/12 ${direction ? '' : 'md:text-right'}`}>
                 <h3 className={`font-heading text-heading text-3xl leading-9 ${direction ? '-ml-3.5' : 'ml-3.5'} pb-5 sm:text-4xl`}>
                     {title}
                 </h3>
