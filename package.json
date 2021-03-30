@@ -4,7 +4,7 @@
   "description": "Minimal CodeSandbox template to use configurable Tailwind CSS with React v17",
   "scripts": {
     "clean": "rm -rf dist .cache",
-    "build": "parcel ./public/index.html",
+    "build": "parcel build ./public/index.html",
     "start": "parcel ./public/index.html"
   },
   "dependencies": {
