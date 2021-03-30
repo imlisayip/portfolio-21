@@ -2,27 +2,94 @@ import React from "react";
 import MediaText from '../components/organisms/MediaText/MediaText'
 import Text from '../components/atoms/Text/Text'
 import Feed from "react-instagram-authless-feed"
+import LisaYip from '../data/lisa-yip.jpg'
+import Eyebrow from "../components/atoms/Eyebrow/Eyebrow";
+import Heading from "../components/atoms/Heading/Heading";
 
 export default function About() {
+
+
     return (
         <div className="my-10">
             {MediaText({
                 title: "Lisa Yip",
-                description: "Enriching the preview experience to facilitate conversation and create new feedback tool",
-                image: "https://images.unsplash.com/photo-1509909756405-be0199881695?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=2100&q=80",
+                description:
+                    <>
+                        <Text>Hi! Thanks for stopping by. I am a User Experience Engineer actively looking for new opportunities. </Text>
+                        <Text>Previously, I delivered digital brand experiences at Patreon, Dropbox and Informatica.</Text>
+                        <Text>My experience includes helping companies helping companies build components and resources to start a design system. I love the process of building creatively through empathy, innovation and teamwork. The synergy helps me find a balance between function and form.</Text>
+                        <Text>I'm always trying to grow and learn something new. I lose track of time when I'm volunteering at endurance events, curled up in a good book, and mesmerizing new places I explore.</Text>
+                        <Text>Please don't hesitate to reach out— I'm happy to chat about work or play!</Text>
+                        <Text>Website built with React, Parcel, and Vercel. Set in  Canela and GT America.</Text>
+                        <Eyebrow>Contact</Eyebrow>
+                        <Text>hello@lisayip.com</Text>
+                        <Eyebrow>Links</Eyebrow>
+                        <Text>
+                            <div >
+                                <a href="https://www.linkedin.com/in/imlisayip/">LinkedIn</a>
+                            </div>
+                            <div >
+                                <a href="https://www.instagram.com/imlisayip/">Instagram</a>
+                            </div>
+                            <div >
+                                <a href="#">Resume</a>
+                            </div>
+                        </Text>
+                        <Eyebrow>Recognition</Eyebrow>
+                        <Text>
+                            <div>
+                                <a href="https://winners.webbyawards.com/2019/websites/general-websites/business-blogwebsite/91997/work-in-progress">
+                                    The Webby Awards | People's Voice Winner; Dropbox Work in Progress Blogs
+                            </a>
+                            </div>
+                            <div>
+
+                                <a href="https://winners.webbyawards.com/2019/websites/general-websites/community/83631/patreon">
+                                    The Webby Awards | Webby Winner; Patreon Community
+                            </a>
+                            </div>
+                        </Text>
+                    </>,
+                image: LisaYip,
                 direction: true
             })}
-            <div className="my-10">
-                <Text>
-                    Blurb about me Blurb about me Blurb about me Blurb about me Blurb about me Blurb about me Blurb about me Blurb about me Blurb about me Blurb about me Blurb about me Blurb about me Blurb about me
-                </Text>
-            </div>
 
             <div className="my-10">
-                gallery
                 {/* <Feed userName="imlisayip" className="grid grid-cols-3 gap-4" classNameLoading="Loading" limit="6" /> */}
             </div>
-            <div className="my-10">Latest and Greatest</div>
-        </div>
+            <div className="my-10 grid grid-cols-1 md:grid-cols-3">
+                <div>
+                    {/* <h3 className={`font-heading text-heading text-3xl leading-9 pb-5 sm:text-4xl`}>
+                       
+                    </h3> */}
+                    <Heading> Latest and Greatest</Heading>
+                    <p className="text-xs">As of March 2021</p>
+                </div>
+                {/* todo: add gap */}
+                <div className="grid grid-col-1 md:col-span-2 md:grid-cols-3">
+                    <div>
+                        <Eyebrow>books</Eyebrow>
+                        <Text>
+                            <a href="https://www.danielletown.com/book/">
+                                Invested
+                            </a>
+                        </Text>
+                        <Text>
+                            <a href="https://www.saltfatacidheat.com/">
+                                Salt Fat Head Acid
+                            </a>
+                        </Text>
+                    </div>
+                    <div>
+                        <Eyebrow>obsession</Eyebrow>
+                        <Text>Creating a "joy" calendar</Text>
+                    </div>
+                    <div>
+                        <Eyebrow>adventure</Eyebrow>
+                        <Text>Spending a lot of time on the mountain learning to ski, finally felt brave enough for black diamonds and off píste! Still working up my courage to attempt moguls.</Text>
+                    </div>
+                </div>
+            </div>
+        </div >
     );
 };

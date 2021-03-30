@@ -1,5 +1,6 @@
 import React from "react";
 import Eyebrow from '../../atoms/Eyebrow/Eyebrow'
+import Heading from "../../atoms/Heading/Heading";
 
 export default function Header({
     eyebrow,
@@ -8,9 +9,7 @@ export default function Header({
     return (
         <>
             <Eyebrow>{eyebrow}</Eyebrow>
-            <h3 className="font-heading text-heading text-3xl sm:text-5xl">
-                {intro}
-            </h3>
+            <Heading>{intro}</Heading>
         </>
 
     )

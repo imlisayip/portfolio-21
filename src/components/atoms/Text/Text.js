@@ -2,13 +2,13 @@ import React from "react";
 
 export default function Text({
     as: Tag = 'p',
-    variant = 'text-sm',
-    className,
+    variant = 'text-base',
+    className = 'font-body pb-5 sm:pb-3.5',
     children,
     ...props
 }) {
     return (
-        <Tag className={`font-body pb-5 sm:pb-3.5 ${className}`} {...props}>
+        <Tag className={` ${className}`}>
             { children}
         </Tag >
     );

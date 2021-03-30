@@ -5,6 +5,22 @@ module.exports = {
     './src/**/*.js',
   ],
   theme: {
+    fontSize: {
+      'sm': ['0.778rem', { // eyebrow
+        lineHeight: '0.889rem',
+        letterSpacing: '0.05rem'
+      }],
+      'base': ['1rem', { // paragraph
+        lineHeight: '1.77rem'
+      }],
+      'md': '2.223rem', // nav
+      'lg': ['2.333rem', { // titles
+        lineHeight: '2rem'
+      }],
+      'xl': ['3.389rem', { // headings
+        lineHeight: '4.0556rem'
+      }],
+    },
     screens: {
       'sm': '480px',
       'md': '767px',

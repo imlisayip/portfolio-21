@@ -3,7 +3,7 @@ import React from "react";
 export default function Footer() {
     return (
         <footer className="flex justify-between items-center flex-col text-center sm:flex-row">
-            <div>imlisayip@gmail.com</div>
+            <div>hello@lisayip.com</div>
             <div className="flex items-center">
                 <div className="p-4 hover:text-gray-800">
                     <a href="https://www.linkedin.com/in/imlisayip/">LinkedIn</a>

@@ -7,7 +7,7 @@ export default function Navbar({ isOpen, toggle }) {
             className="flex justify-between items-center h-24 relative "
             role="navigation"
         >
-            <Link to="/" className="text-2xl font-heading" >
+            <Link to="/" className="text-lg font-heading" >
                 Lisa Yip
             </Link>
             <div className="cursor-pointer md:hidden" onClick={toggle}>
@@ -18,10 +18,10 @@ export default function Navbar({ isOpen, toggle }) {
                 </button>
             </div>
             <div className="hidden md:block">
-                <Link className="p-4 text-xl font-heading" to="/">
+                <Link className="p-4 text-md font-heading" to="/">
                     work
                 </Link>
-                <Link className="p-4 text-xl font-heading" to="/about">
+                <Link className="p-4 text-md font-heading" to="/about">
                     about
                 </Link>
             </div>

@@ -11,8 +11,8 @@ export default function Dropdown({ isOpen, toggle }) {
                     : 'hidden'}
             onClick={toggle}
         >
-            <Link className="py-4 text-xl font-heading" to="/">work</Link>
-            <Link className="py-4 text-xl font-heading" to="/about">about</Link>
+            <Link className="py-4 text-md font-heading" to="/">work</Link>
+            <Link className="py-4 text-md font-heading" to="/about">about</Link>
         </ div>
     )
 }

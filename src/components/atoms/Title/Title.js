@@ -1,8 +1,8 @@
 import React from "react";
 
-export default function Heading({
-    as: Tag = 'h1',
-    className = 'font-heading text-heading text-xl',
+export default function Title({
+    as: Tag = 'h3',
+    className = 'font-heading text-heading text-lg',
     children,
     ...props
 }) {
