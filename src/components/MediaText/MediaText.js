@@ -1,0 +1,50 @@
+import React from 'react';
+import Text from '../Text/Text'
+import Eyebrow from '../Eyebrow/Eyebrow'
+import Image from '../Image/Image'
+import Title from '../Title/Title';
+
+export default function Hero({
+    title,
+    description,
+    cta,
+    ctaLink = '#',
+    image,
+    alt,
+    color,
+    direction,
+    type = 'work',
+    ...props
+}) {
+
+    let containerClassNames = type === 'work'
+        ? `${direction ? 'md:flex-row' : 'md:flex-row-reverse'}`
+        : `${direction ? 'sm:flex-row' : 'sm:flex-row-reverse'}`
+    let imageClassNames = type === 'work'
+        ? 'max-w-4xl md:w-6/12 lg:w-8/12 md:mt-12 lg:mt-0'
+        : 'max-w-xl sm:w-5/12  md:w-4/12 lg:w-4/12 sm:mr-4 lg:mr-8'
+    let textClassNames = type === 'work'
+        ? 'md:px-4 md:w-6/12 lg:w-4/12 lg:mt-12'
+        : 'sm:w-7/12 md:w-6/12 lg:w-5/12 sm:mt-10 md:mt-12 lg:mt-24'
+    return (
+        <div className={`mb-20 flex flex-col justify-center ${containerClassNames}`}>
+            {image && (
+                <div className={`${imageClassNames} pb-6`} >
+                    <Image src={image} alt={alt} />
+                </div>
+            )}
+
+            <div className={`${textClassNames} ${direction ? '' : 'md:text-right'}`}>
+                <Title type={type} direction={direction}>{title}</Title>
+                <Text type={type}>{description}</Text>
+                {cta && (
+                    <Eyebrow>
+                        <a href={ctaLink}>
+                            {cta}
+                        </a>
+                    </Eyebrow>
+                )}
+            </div>
+        </div >
+    )
+}

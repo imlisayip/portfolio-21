@@ -1,10 +1,10 @@
 import React from "react";
-import MediaText from '../components/organisms/MediaText/MediaText'
-import Text from '../components/atoms/Text/Text'
+import MediaText from '../components/MediaText/MediaText'
+import Text from '../components/Text/Text'
 import Feed from "react-instagram-authless-feed"
-import LisaYip from '../data/lisa-yip.jpg'
-import Eyebrow from "../components/atoms/Eyebrow/Eyebrow";
-import Heading from "../components/atoms/Heading/Heading";
+import LisaYip from '../data/lisa-yip.png'
+import Eyebrow from "../components/Eyebrow/Eyebrow";
+import Heading from "../components/Heading/Heading";
 
 export default function About() {
 
@@ -21,8 +21,10 @@ export default function About() {
                         <Text>I'm always trying to grow and learn something new. I lose track of time when I'm volunteering at endurance events, curled up in a good book, and mesmerizing new places I explore.</Text>
                         <Text>Please don't hesitate to reach out— I'm happy to chat about work or play!</Text>
                         <Text>Website built with React, Parcel, and Vercel. Set in  Canela and GT America.</Text>
+
                         <Eyebrow>Contact</Eyebrow>
                         <Text>hello@lisayip.com</Text>
+
                         <Eyebrow>Links</Eyebrow>
                         <Text>
                             <div >
@@ -35,35 +37,33 @@ export default function About() {
                                 <a href="#">Resume</a>
                             </div>
                         </Text>
+
                         <Eyebrow>Recognition</Eyebrow>
                         <Text>
                             <div>
                                 <a href="https://winners.webbyawards.com/2019/websites/general-websites/business-blogwebsite/91997/work-in-progress">
                                     The Webby Awards | People's Voice Winner; Dropbox Work in Progress Blogs
-                            </a>
+                                </a>
                             </div>
                             <div>
-
                                 <a href="https://winners.webbyawards.com/2019/websites/general-websites/community/83631/patreon">
                                     The Webby Awards | Webby Winner; Patreon Community
-                            </a>
+                                </a>
                             </div>
                         </Text>
                     </>,
                 image: LisaYip,
-                direction: true
+                direction: true,
+                type: 'about'
             })}
 
-            <div className="my-10">
-                {/* <Feed userName="imlisayip" className="grid grid-cols-3 gap-4" classNameLoading="Loading" limit="6" /> */}
-            </div>
+            {/* <div className="my-10">
+                <Feed userName="imlisayip" className="grid grid-cols-3 gap-4" classNameLoading="Loading" limit="6" />
+            </div> */}
             <div className="my-10 grid grid-cols-1 md:grid-cols-3">
                 <div>
-                    {/* <h3 className={`font-heading text-heading text-3xl leading-9 pb-5 sm:text-4xl`}>
-                       
-                    </h3> */}
                     <Heading> Latest and Greatest</Heading>
-                    <p className="text-xs">As of March 2021</p>
+                    <p className="text-sm">As of March 2021</p>
                 </div>
                 {/* todo: add gap */}
                 <div className="grid grid-col-1 md:col-span-2 md:grid-cols-3">

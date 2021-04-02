@@ -6,20 +6,41 @@ module.exports = {
   ],
   theme: {
     fontSize: {
-      'sm': ['0.778rem', { // eyebrow
-        lineHeight: '0.889rem',
-        letterSpacing: '0.05rem'
+      'sm': ['0.78rem', { // eyebrow 
+        lineHeight: '0.89rem',
+        letterSpacing: '2px'
       }],
-      'base': ['1rem', { // paragraph
+      'basew': ['0.888889rem', { // paragraph work
+        lineHeight: '1.33333rem'
+      }],
+      'basea': ['1rem', { // paragraph about
         lineHeight: '1.77rem'
       }],
-      'md': '2.223rem', // nav
-      'lg': ['2.333rem', { // titles
-        lineHeight: '2rem'
+      'md': '28px', // nav
+      'lgm': ['2.11rem', { // titles mobile
+        lineHeight: '1.96rem'
       }],
-      'xl': ['3.389rem', { // headings
-        lineHeight: '4.0556rem'
+      'lgt': ['2.33rem', { // titles tablet
+        lineHeight: '2.04rem'
       }],
+      'lgd': ['2.33rem', { // titles desktop
+        lineHeight: '2.23rem'
+      }],
+      'xlm': ['2.22rem', { // headings mobile
+        lineHeight: '2.67rem'
+      }],
+      'xlt': ['3.55556rem', { // headings tablet
+        lineHeight: '4.44rem'
+      }],
+      'xld': ['3.35rem', { // headings desktop
+        lineHeight: '4.4rem'
+      }],
+      'name': ['3.38889rem', {
+        lineHeight: '4.05556rem'
+      }]
+    },
+    maxWidth: {
+      '3/4': '75%',
     },
     screens: {
       'sm': '480px',
@@ -35,9 +56,9 @@ module.exports = {
         heading: '#222222'
       },
       fontFamily: {
-        sans: ['gt-america-light', 'sans-serif'],
-        heading: ['canela-thin-web', 'serif'],
+        body: ['gt-america-light', 'sans-serif'],
         eyebrow: ['gt-america-medium', 'sans-serif'],
+        heading: ['canela-thin-web', 'serif'],
       }
     }
   },

@@ -1,9 +1,9 @@
 import React, { useState, useEffect } from "react";
 import { Router } from "@reach/router";
 
-import Navbar from './components/organisms/Navbar/Navbar'
-import Dropdown from './components/organisms/Dropdown/Dropdown'
-import Footer from './components/organisms/Footer/Footer'
+import Navbar from './components/Navbar/Navbar'
+import Dropdown from './components/Dropdown/Dropdown'
+import Footer from './components/Footer/Footer'
 
 import About from './pages/About'
 import Work from './pages/Work'
@@ -29,14 +29,16 @@ export function App() {
   })
 
   return (
-    <div className="sm:m-6 p-6 bg-cream">
-      <Navbar isOpen={isOpen} toggle={toggle} />
-      <Dropdown isOpen={isOpen} toggle={toggle} />
-      <Router primary={false} >
-        <Work path="/" />
-        <About path="/about" />
-      </Router>
-      <Footer />
+    <div className="sm:m-6 py-6 px-5 bg-cream">
+      <div className="max-w-screen-lg mx-auto">
+        <Navbar isOpen={isOpen} toggle={toggle} />
+        <Dropdown isOpen={isOpen} toggle={toggle} />
+        <Router primary={false} >
+          <Work path="/" />
+          <About path="/about" />
+        </Router>
+        <Footer />
+      </div>
     </div>
   )
 }
