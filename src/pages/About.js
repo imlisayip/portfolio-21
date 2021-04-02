@@ -4,11 +4,9 @@ import Text from '../components/Text/Text'
 import Feed from "react-instagram-authless-feed"
 import LisaYip from '../data/lisa-yip.png'
 import Eyebrow from "../components/Eyebrow/Eyebrow";
-import Heading from "../components/Heading/Heading";
+import Title from "../components/Title/Title";
 
 export default function About() {
-
-
     return (
         <div className="my-10">
             {MediaText({
@@ -61,30 +59,29 @@ export default function About() {
                 <Feed userName="imlisayip" className="grid grid-cols-3 gap-4" classNameLoading="Loading" limit="6" />
             </div> */}
             <div className="my-10 grid grid-cols-1 md:grid-cols-3">
-                <div>
-                    <Heading> Latest and Greatest</Heading>
-                    <p className="text-sm">As of March 2021</p>
+                <div className="pb-8">
+                    <Title type="work"> Latest and Greatest</Title>
+                    <p className="text-sm">As of April 2021</p>
                 </div>
                 {/* todo: add gap */}
                 <div className="grid grid-col-1 md:col-span-2 md:grid-cols-3">
-                    <div>
+                    <div className=" md:pt-16">
                         <Eyebrow>books</Eyebrow>
                         <Text>
                             <a href="https://www.danielletown.com/book/">
                                 Invested
                             </a>
-                        </Text>
-                        <Text>
+                            <br />
                             <a href="https://www.saltfatacidheat.com/">
                                 Salt Fat Head Acid
                             </a>
                         </Text>
                     </div>
-                    <div>
+                    <div className=" md:pt-16">
                         <Eyebrow>obsession</Eyebrow>
                         <Text>Creating a "joy" calendar</Text>
                     </div>
-                    <div>
+                    <div className=" md:pt-16">
                         <Eyebrow>adventure</Eyebrow>
                         <Text>Spending a lot of time on the mountain learning to ski, finally felt brave enough for black diamonds and off píste! Still working up my courage to attempt moguls.</Text>
                     </div>

@@ -7,10 +7,10 @@ export default function Header({
     intro
 }) {
     return (
-        <>
+        <div className="my-16 md:my-28 md:max-w-4/5 lg:max-w-3/4 ">
             <Eyebrow >{eyebrow}</Eyebrow>
-            <Heading>{intro}</Heading>
-        </>
+            <Heading className="pt-5">{intro}</Heading>
+        </div>
 
     )
 }

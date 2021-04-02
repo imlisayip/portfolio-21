@@ -27,7 +27,7 @@ export default function Hero({
         ? 'md:px-4 md:w-6/12 lg:w-4/12 lg:mt-12'
         : 'sm:w-7/12 md:w-6/12 lg:w-5/12 sm:mt-10 md:mt-12 lg:mt-24'
     return (
-        <div className={`mb-20 flex flex-col justify-center ${containerClassNames}`}>
+        <div className={`my-16 md:my-28 flex flex-col justify-center ${containerClassNames}`}>
             {image && (
                 <div className={`${imageClassNames} pb-6`} >
                     <Image src={image} alt={alt} />

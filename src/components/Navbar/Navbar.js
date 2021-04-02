@@ -4,11 +4,11 @@ import { Link } from "@reach/router";
 export default function Navbar({ isOpen, toggle }) {
     return (
         <nav
-            className="flex justify-between items-center h-24 relative "
+            className="flex justify-between items-center sm:h-24 relative "
             role="navigation"
         >
-            <Link to="/" className="text-lg font-heading" >
-                Lisa Yip
+            <Link to="/" className="text-md font-heading" >
+                LY
             </Link>
             <div className="cursor-pointer md:hidden" onClick={toggle}>
                 <button className={`hamburger hamburger--elastic ${isOpen ? 'is-active' : ''}`} type="button">
