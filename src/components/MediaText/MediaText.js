@@ -28,11 +28,11 @@ export default function Hero({ ...props }) {
     return (
         <div className={`my-16 md:my-28 flex flex-col justify-center ${containerClassNames}`}>
             {image && cta ? (
-                <a href={ctaLink}>
-                    <div className={`${imageClassNames} pb-6`} >
+                <div className={`${imageClassNames} pb-6`} >
+                    <a href={ctaLink}>
                         <Image src={image} alt={alt} />
-                    </div>
-                </a>
+                    </a>
+                </div>
             ) : (
                 <div className={`${imageClassNames} pb-6`} >
                     <Image src={image} alt={alt} />
