@@ -35,7 +35,7 @@ export function App() {
         <Dropdown isOpen={isOpen} toggle={toggle} />
         <Router primary={false} >
           <Work path="/" />
-          <About path="/about" />
+          <About path="about" />
         </Router>
         <Footer />
       </div>
