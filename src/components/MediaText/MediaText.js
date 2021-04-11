@@ -4,18 +4,17 @@ import Eyebrow from '../Eyebrow/Eyebrow'
 import Image from '../Image/Image'
 import Title from '../Title/Title';
 
-export default function Hero({
-    title,
-    description,
-    cta,
-    ctaLink = '#',
-    image,
-    alt,
-    color,
-    direction,
-    type = 'work',
-    ...props
-}) {
+export default function Hero({ ...props }) {
+    const {
+        title,
+        description,
+        cta,
+        ctaLink = '#',
+        image,
+        alt,
+        direction,
+        type = 'work',
+    } = props
 
     let containerClassNames = type === 'work'
         ? `${direction ? 'md:flex-row' : 'md:flex-row-reverse'}`
@@ -28,7 +27,13 @@ export default function Hero({
         : 'sm:w-7/12 md:w-6/12 lg:w-5/12 sm:mt-10 md:mt-12 lg:mt-24'
     return (
         <div className={`my-16 md:my-28 flex flex-col justify-center ${containerClassNames}`}>
-            {image && (
+            {image && cta ? (
+                <a href={ctaLink}>
+                    <div className={`${imageClassNames} pb-6`} >
+                        <Image src={image} alt={alt} />
+                    </div>
+                </a>
+            ) : (
                 <div className={`${imageClassNames} pb-6`} >
                     <Image src={image} alt={alt} />
                 </div>
