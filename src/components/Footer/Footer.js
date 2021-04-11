@@ -1,4 +1,5 @@
 import React from "react";
+import Resume from "../../data/YIP_Resume_21.pdf"
 
 export default function Footer() {
     return (
@@ -13,9 +14,8 @@ export default function Footer() {
                     <a href="https://www.instagram.com/imlisayip/">Instagram</a>
                 </div>
                 <span> • </span>
-                {/* TODO: update resume link */}
                 <div className="p-4 hover:text-gray-800">
-                    <a href="#">Resume</a>
+                    <a href={Resume}>Resume</a>
                 </div>
             </div>
         </footer>

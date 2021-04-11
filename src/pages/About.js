@@ -63,7 +63,6 @@ export default function About() {
                     <Title type="work"> Latest and Greatest</Title>
                     <p className="text-sm">As of April 2021</p>
                 </div>
-                {/* todo: add gap */}
                 <div className="grid grid-col-1 md:col-span-2 md:grid-cols-3">
                     <div className=" md:pt-16">
                         <Eyebrow>books</Eyebrow>
