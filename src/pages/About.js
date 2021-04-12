@@ -5,6 +5,8 @@ import Feed from "react-instagram-authless-feed"
 import LisaYip from '../data/lisa-yip.png'
 import Eyebrow from "../components/Eyebrow/Eyebrow";
 import Title from "../components/Title/Title";
+import Resume from "../data/YIP_Resume_21.pdf"
+
 
 export default function About() {
     return (
@@ -32,7 +34,7 @@ export default function About() {
                                 <a href="https://www.instagram.com/imlisayip/">Instagram</a>
                             </div>
                             <div >
-                                <a href="#">Resume</a>
+                                <a href={Resume}>Resume</a>
                             </div>
                         </Text>
 
@@ -76,11 +78,11 @@ export default function About() {
                             </a>
                         </Text>
                     </div>
-                    <div className=" md:pt-16">
+                    <div className="md:pt-16">
                         <Eyebrow>obsession</Eyebrow>
                         <Text>Creating a "joy" calendar</Text>
                     </div>
-                    <div className=" md:pt-16">
+                    <div className="md:pt-16">
                         <Eyebrow>adventure</Eyebrow>
                         <Text>Spending a lot of time on the mountain learning to ski, finally felt brave enough for black diamonds and off píste! Still working up my courage to attempt moguls.</Text>
                     </div>

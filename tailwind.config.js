@@ -52,7 +52,8 @@ module.exports = {
     extend: {
       colors: {
         cream: '#EFE7E2',
-        eyebrow: '#c6b9b1',
+        eyebrow: '#564A3E',
+        // eyebrow: '#5F4635',
         heading: '#222222'
       },
       fontFamily: {
