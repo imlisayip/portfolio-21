@@ -3,6 +3,7 @@ import Text from '../Text/Text'
 import Eyebrow from '../Eyebrow/Eyebrow'
 import Image from '../Image/Image'
 import Title from '../Title/Title';
+import Link from '../Link/Link';
 
 export default function Hero({ ...props }) {
     const {
@@ -45,9 +46,9 @@ export default function Hero({ ...props }) {
                 <Text type={type}>{description}</Text>
                 {cta && (
                     <Eyebrow>
-                        <a href={ctaLink}>
+                        <Link href={ctaLink} highlight>
                             {cta}
-                        </a>
+                        </Link>
                     </Eyebrow>
                 )}
             </div>

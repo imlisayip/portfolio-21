@@ -4,9 +4,14 @@ export default function Link({ ...props }) {
     const {
         children,
         href,
+        highlight
     } = props
 
     return (
-        <a href={href}>{children}</a>
+        <a
+            className={highlight ? 'highlight' : ''}
+            href={href}>
+            {children}
+        </a>
     );
 };

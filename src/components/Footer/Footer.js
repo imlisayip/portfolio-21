@@ -1,5 +1,6 @@
 import React from "react";
 import Resume from "../../data/YIP_Resume_21.pdf"
+import Link from '../Link/Link'
 
 export default function Footer() {
     return (
@@ -7,15 +8,15 @@ export default function Footer() {
             <div>hello@lisayip.com</div>
             <div className="flex items-center">
                 <div className="p-4 hover:text-gray-800">
-                    <a href="https://www.linkedin.com/in/imlisayip/">LinkedIn</a>
+                    <Link highlight href="https://www.linkedin.com/in/imlisayip/">LinkedIn</Link>
                 </div>
                 <span> • </span>
                 <div className="p-4 hover:text-gray-800">
-                    <a href="https://www.instagram.com/imlisayip/">Instagram</a>
+                    <Link highlight href="https://www.instagram.com/imlisayip/">Instagram</Link>
                 </div>
                 <span> • </span>
                 <div className="p-4 hover:text-gray-800">
-                    <a href={Resume}>Resume</a>
+                    <Link highlight href={Resume}>Resume</Link>
                 </div>
             </div>
         </footer>
