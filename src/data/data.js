@@ -53,7 +53,6 @@ export const PROJECTS = [
         alt: 'Screenshot of Dropbox transparency webpage',
     }
 ]
-
 export const PROFILE = {
     title: "Lisa Yip",
     description: renderToString(
@@ -84,8 +83,7 @@ export const PROFILE = {
             <br />
             <Link href="https://winners.webbyawards.com/2019/websites/general-websites/community/83631/patreon">
                 The Webby Awards | Webby Winner; Patreon Community
-            </Link >
-
+            </Link>
         </>
     ),
     image: LisaYip,
