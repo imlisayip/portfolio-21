@@ -3,9 +3,9 @@ import { Link } from "@reach/router";
 
 export default function Navbar({ isOpen, toggle }) {
     return (
-        <div className="bg-white pt-6">
+        <div className="bg-white  sm:pt-6">
             <nav
-                className="flex justify-between items-center sm:h-24 relative sm:mx-6 pt-6 px-5 bg-cream"
+                className="flex justify-between items-center h-16 sm:h-24 relative sm:mx-6 px-5 bg-cream"
                 role="navigation"
             >
                 <Link to="/" className="text-md font-heading" >

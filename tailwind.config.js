@@ -60,7 +60,10 @@ module.exports = {
         body: ['gt-america-light', 'sans-serif'],
         eyebrow: ['gt-america-medium', 'sans-serif'],
         heading: ['canela-thin-web', 'serif'],
-      }
+      },
+      gridTemplateRows: {
+        '12': 'repeat(12, minmax(0, 1fr))',
+      },
     }
   },
   variants: {},

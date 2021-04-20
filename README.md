@@ -5,6 +5,8 @@ Parcel
 React
 Tailwind
 
+react-headroom
+
 ## Usage
 
 ```bash
@@ -19,7 +21,6 @@ There are a lot of ways to update this project and some of them would include:
 * Add animations
 * Connect an Instargam API to the about page
 * Add back to top
-* Have the nav pop up when scrolling up
 * Add node to host data separately instead of hardcoding
 * Optimize images
 * Create a 404 page

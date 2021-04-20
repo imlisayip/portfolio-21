@@ -32,8 +32,8 @@ export function App() {
     <>
       <Headroom>
         <Navbar isOpen={isOpen} toggle={toggle} />
+        {isOpen && <Dropdown isOpen={isOpen} toggle={toggle} />}
       </Headroom>
-      <Dropdown isOpen={isOpen} toggle={toggle} />
       <div className="sm:mx-6 sm:mb-6 py-6 px-5 bg-cream">
         <div className="max-w-screen-lg mx-auto">
           <Router primary={false} >
