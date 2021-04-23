@@ -53,13 +53,14 @@ export const PROJECTS = [
         alt: 'Screenshot of Dropbox transparency webpage',
     }
 ]
+
 export const PROFILE = {
     title: "Lisa Yip",
     description: renderToString(
         <>
             <Text>Hi! Thanks for stopping by. I am a User Experience Engineer actively looking for new opportunities. </Text>
             <Text>Previously, I delivered digital brand experiences at Patreon, Dropbox and Informatica.</Text>
-            <Text>My experience includes helping companies helping companies build components and resources to start a design system. I love the process of building creatively through empathy, innovation and teamwork. The synergy helps me find a balance between function and form.</Text>
+            <Text>My experience includes helping companies build components and resources to start a design system. I love the process of building creatively through empathy, innovation and teamwork. The synergy helps me find a balance between function and form.</Text>
             <Text>I'm always trying to grow and learn something new. I lose track of time when I'm volunteering at endurance events, curled up in a good book, and mesmerizing new places I explore.</Text>
             <Text>Please don't hesitate to reach out— I'm happy to chat about work or play!</Text>
             <Text>Website built with React, Parcel, and Vercel. Set in  Canela and GT America.</Text>
