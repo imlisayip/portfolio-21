@@ -9,7 +9,6 @@ import Link from "../components/Link/Link";
 import { renderToString } from "react-dom/server";
 
 export default function About() {
-    console.log(PROFILE)
     return (
         <div className="my-10">
             {MediaText({
@@ -31,7 +30,7 @@ export default function About() {
                     <Title type="work">Latest and Greatest</Title>
                     <p className="text-sm">As of April 2021</p>
                 </div>
-                <div className="grid grid-col-1 md:col-span-2 md:grid-cols-3">
+                <div className="grid grid-col-1 md:col-span-2 md:grid-cols-2">
                     <div className=" md:pt-16">
                         <Eyebrow>books</Eyebrow>
                         <Text>
@@ -48,10 +47,10 @@ export default function About() {
                             )}
                         </Text>
                     </div>
-                    <div className="md:pt-16">
+                    {/* <div className="md:pt-16">
                         <Eyebrow>obsession</Eyebrow>
                         <Text>Creating a "joy" calendar</Text>
-                    </div>
+                    </div> */}
                     <div className="md:pt-16">
                         <Eyebrow>adventure</Eyebrow>
                         <Text>Spending a lot of time on the mountain learning to ski, finally felt brave enough for black diamonds and off píste! Still working up my courage to attempt moguls.</Text>

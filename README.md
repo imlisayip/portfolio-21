@@ -22,5 +22,4 @@ There are a lot of ways to update this project and some of them would include:
 * Connect an Instargam API to the about page
 * Add back to top
 * Add node to host data separately instead of hardcoding
-* Optimize images
 * Create a 404 page

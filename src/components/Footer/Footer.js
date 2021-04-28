@@ -12,6 +12,10 @@ export default function Footer() {
                 </div>
                 <span> • </span>
                 <div className="p-4 hover:text-gray-800">
+                    <Link highlight href="https://github.com/imlisayip">Github</Link>
+                </div>
+                <span> • </span>
+                <div className="p-4 hover:text-gray-800">
                     <Link highlight href="https://www.instagram.com/imlisayip/">Instagram</Link>
                 </div>
                 <span> • </span>

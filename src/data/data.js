@@ -9,7 +9,7 @@ import Product from '../data/patreon-product.png'
 import WorkInProgress from '../data/work-in-progress.png'
 import Transparency from '../data/dropbox-transparency.png'
 
-import LisaYip from '../data/lisa-yip.png'
+import LisaYip from '../data/lisa-yip.jpeg'
 import Resume from "../data/YIP_Resume_21.pdf"
 
 
@@ -64,18 +64,6 @@ export const PROFILE = {
             <Text>I'm always trying to grow and learn something new. I lose track of time when I'm volunteering at endurance events, curled up in a good book, and mesmerizing new places I explore.</Text>
             <Text>Please don't hesitate to reach out— I'm happy to chat about work or play!</Text>
             <Text>Website built with React, Parcel, and Vercel. Set in  Canela and GT America.</Text>
-
-            <Eyebrow>Contact</Eyebrow>
-            <Text>hello@lisayip.com</Text>
-
-            <Eyebrow>Links</Eyebrow>
-            <div className="font-body pb-6 sm:pb-3.5 text-basea">
-                <Link href="https://www.linkedin.com/in/imlisayip/">LinkedIn</Link>
-                <br />
-                <Link href="https://www.instagram.com/imlisayip/">Instagram</Link>
-                <br />
-                <Link href={Resume}>Resume</Link>
-            </div>
 
             <Eyebrow>Recognition</Eyebrow>
             <Link href="https://winners.webbyawards.com/2019/websites/general-websites/business-blogwebsite/91997/work-in-progress">
