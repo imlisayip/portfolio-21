@@ -53,7 +53,7 @@ export default function About() {
                     </div> */}
                     <div className="md:pt-16">
                         <Eyebrow>adventure</Eyebrow>
-                        <Text>Prepping for a multiday backpacking trip our in the Sequoia & Kings Canyon National Parks.</Text>
+                        <Text>Prepping for a multiday backpacking trip out in the Sequoia & Kings Canyon National Parks.</Text>
                     </div>
                 </div>
             </div>
