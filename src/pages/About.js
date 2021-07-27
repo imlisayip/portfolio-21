@@ -28,7 +28,7 @@ export default function About() {
             <div className="my-10 grid grid-cols-1 md:grid-cols-3">
                 <div className="pb-8">
                     <Title type="work">Latest and Greatest</Title>
-                    <p className="text-sm">As of April 2021</p>
+                    <p className="text-sm">As of July 2021</p>
                 </div>
                 <div className="grid grid-col-1 md:col-span-2 md:grid-cols-2">
                     <div className=" md:pt-16">
@@ -36,12 +36,12 @@ export default function About() {
                         <Text>
                             {renderToString(
                                 <>
-                                    <Link href="https://www.danielletown.com/book/">
-                                        Invested
+                                    <Link href="https://www.npr.org/2020/10/03/918868242/its-not-quite-dark-enough-in-the-midnight-library">
+                                        Midnight Library
                                     </Link>
                                     <br />
-                                    <Link href="https://www.saltfatacidheat.com/">
-                                        Salt Fat Head Acid
+                                    <Link href="https://www.youtube.com/watch?v=QSCXyYuT2rE">
+                                        The Body Keeps the Score
                                     </Link>
                                 </>
                             )}
@@ -53,7 +53,7 @@ export default function About() {
                     </div> */}
                     <div className="md:pt-16">
                         <Eyebrow>adventure</Eyebrow>
-                        <Text>Spending a lot of time on the mountain learning to ski, finally felt brave enough for black diamonds and off píste! Still working up my courage to attempt moguls.</Text>
+                        <Text>Prepping for a multiday backpacking trip our in the Sequoia & Kings Canyon National Parks.</Text>
                     </div>
                 </div>
             </div>
