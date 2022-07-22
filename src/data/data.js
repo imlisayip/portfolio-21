@@ -9,7 +9,7 @@ import Product from '../data/patreon-product.png'
 import WorkInProgress from '../data/work-in-progress.png'
 import Transparency from '../data/dropbox-transparency.png'
 
-import LisaYip from '../data/lisa-yip.jpeg'
+import LisaYip from '../data/lisa-yip-climbing.jpg'
 import Resume from "../data/YIP_Resume_21.pdf"
 
 
