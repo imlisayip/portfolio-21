@@ -25,7 +25,7 @@ export default function About() {
             {/* <div className="my-10">
                 <Feed userName="imlisayip" className="grid grid-cols-3 gap-4" classNameLoading="Loading" limit="6" />
             </div> */}
-            <div className="my-10 grid grid-cols-1 md:grid-cols-3">
+            {/* <div className="my-10 grid grid-cols-1 md:grid-cols-3">
                 <div className="pb-8">
                     <Title type="work">Latest and Greatest</Title>
                     <p className="text-sm">As of July 2021</p>
@@ -47,16 +47,16 @@ export default function About() {
                             )}
                         </Text>
                     </div>
-                    {/* <div className="md:pt-16">
+                     <div className="md:pt-16">
                         <Eyebrow>obsession</Eyebrow>
                         <Text>Creating a "joy" calendar</Text>
-                    </div> */}
+                    </div> 
                     <div className="md:pt-16">
                         <Eyebrow>adventure</Eyebrow>
                         <Text>Prepping for a multiday backpacking trip out in the Sequoia & Kings Canyon National Parks.</Text>
                     </div>
                 </div>
-            </div>
+            </div> */}
         </div >
     );
 };
