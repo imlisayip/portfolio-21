@@ -9,7 +9,6 @@ export default function Dropdown({ toggle }) {
     }, []);
 
     return (
-        // TODO: add transition
         <div className="absolute w-screen max-h-full  sm:mx-6 sm:w-11/12">
             <div
                 className='grid grid-rows-12 auto-rows-min text-center items-center bg-cream'
