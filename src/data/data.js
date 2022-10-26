@@ -4,6 +4,7 @@ import Text from '../components/Text/Text'
 import Eyebrow from '../components/Eyebrow/Eyebrow'
 import Link from '../components/Link/Link'
 
+import JourneyMaps from '../data/fullstory-journey-maps.png'
 import COE from '../data/creativity-over-everything.png'
 import Product from '../data/patreon-product.png'
 import WorkInProgress from '../data/work-in-progress.png'
@@ -18,6 +19,14 @@ export const HEADER = {
     intro: 'Lisa Yip  is a user experience engineer open to new opportunities, exploring and living in Bay Area. '
 }
 export const PROJECTS = [
+    {
+        title: 'FullStory Journey Maps',
+        description: "FullStory is a web-based digital intelligence system that helps optimize the client experience. Journey maps is a highly anticipated analysis for visualizing user paths. Worked closely with team to build and connect UI pieces together using React, TypeScript, and Go.",
+        cta: 'Visit site',
+        ctaLink: 'https://www.fullstory.com/platform/journey-maps/',
+        image: JourneyMaps,
+        alt: 'Screenshot of FullStory Journey Maps Product',
+    },
     {
         title: 'Creativity Over Everything',
         description: "Patreon is a membership platform that makes it easy for artists and creators to get paid. Patreon's brand campaign emphasizing the system for creative people is broken, to ditch the old ways and let fans give creators the freedom and stability they need to do their best creative work. Collaborated alongside brand team from design to launch during a <strong>tight 3-week turnaround, building responsible landing page with React, Parcel.js</strong>.",
@@ -59,7 +68,7 @@ export const PROFILE = {
     description: renderToString(
         <>
             <Text>Hi! Thanks for stopping by. I am a User Experience Engineer actively looking for new opportunities. </Text>
-            <Text>Previously, I delivered digital brand experiences at Patreon, Dropbox and Informatica.</Text>
+            <Text>Previously, I delivered digital brand experiences at FullStory, Patreon, Dropbox and Informatica.</Text>
             <Text>My experience includes helping companies build components and resources to start a design system. I love the process of building creatively through empathy, innovation and teamwork. The synergy helps me find a balance between function and form.</Text>
             <Text>I'm always trying to grow and learn something new. I lose track of time when I'm volunteering at endurance events, curled up in a good book, and mesmerizing new places I explore.</Text>
             <Text>Please don't hesitate to reach out— I'm happy to chat about work or play!</Text>
