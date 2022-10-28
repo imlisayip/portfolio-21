@@ -35,7 +35,7 @@ export function App() {
         {isOpen && <Dropdown isOpen={isOpen} toggle={toggle} />}
       </Headroom>
       <div className="sm:mx-6 sm:mb-6 py-6 px-5 bg-cream">
-        <div className="max-w-screen-lg mx-auto">
+        <div className="content mx-auto max-w-screen-xl">
           <Router primary={false} >
             <Work path="/" />
             <About path="about" />
