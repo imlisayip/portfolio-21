@@ -26,7 +26,7 @@ export default function Hero({ ...props }) {
         : 'max-w-xl sm:w-5/12  md:w-4/12 lg:w-4/12 sm:mr-4 lg:mr-8'
     let textClassNames = type === 'work'
         ? 'md:px-4 md:w-6/12 lg:w-4/12 lg:mt-12'
-        : 'sm:w-7/12 md:w-6/12 lg:w-5/12 sm:mt-10 md:mt-12 lg:mt-24'
+        : 'sm:w-7/12 md:w-6/12 lg:w-5/12 sm:mt-0 md:mt-12 lg:mt-24'
     return (
         <div key={key} className={`my-16 md:my-28 flex flex-col justify-center ${containerClassNames}`}>
             {image && cta ? (

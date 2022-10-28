@@ -10,7 +10,7 @@ import Product from '../data/patreon-product.png'
 import WorkInProgress from '../data/work-in-progress.png'
 import Transparency from '../data/dropbox-transparency.png'
 
-import LisaYip from '../data/lisa-yip-climbing.jpg'
+import LisaYip from '../data/sf-trolley.jpg'
 import Resume from "../data/YIP_Resume_21.pdf"
 
 
@@ -21,7 +21,7 @@ export const HEADER = {
 export const PROJECTS = [
     {
         title: 'FullStory Journey Maps',
-        description: "FullStory is a web-based digital intelligence system that helps optimize the client experience. Journey maps is a highly anticipated analysis for visualizing user paths. Worked closely with team to build and connect UI pieces together using React, TypeScript, and Go.",
+        description: "FullStory is a web-based digital intelligence system that helps optimize the client experience. Journey maps is a highly anticipated analysis for visualizing user paths. Worked closely with team to <strong>build and connect UI pieces together using React, TypeScript</strong>, and Go.",
         cta: 'Visit site',
         ctaLink: 'https://www.fullstory.com/platform/journey-maps/',
         image: JourneyMaps,

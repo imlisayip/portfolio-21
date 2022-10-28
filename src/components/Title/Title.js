@@ -9,8 +9,8 @@ export default function Title({
     ...props
 }) {
     let textStyles = type === 'work'
-        ? `text-lgm md:text-lgt lg:text-lgd ${direction ? 'md:-ml-16' : 'md:-mr-16'}`
-        : 'text-center sm:text-left text-name sm:-ml-10 md:-ml-12 lg:-ml-20'
+        ? 'text-lgm md:text-lgt lg:text-lgd'
+        : 'text-center sm:text-left text-name'
     return (
         <Tag className={`${className} ${textStyles}`}>
             {children}
