@@ -10,7 +10,7 @@ import Product from '../data/patreon-product.png'
 import WorkInProgress from '../data/work-in-progress.png'
 import Transparency from '../data/dropbox-transparency.png'
 
-import LisaYip from '../data/sf-trolley.jpg'
+import LisaYip from '../data/sf-trolley.png'
 import Resume from "../data/YIP_Resume_21.pdf"
 
 
