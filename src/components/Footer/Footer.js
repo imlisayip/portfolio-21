@@ -14,10 +14,10 @@ export default function Footer() {
                 <div className="p-4 hover:text-gray-800">
                     <Link highlight href="https://github.com/imlisayip">Github</Link>
                 </div>
-                <span> • </span>
+                {/* <span> • </span>
                 <div className="p-4 hover:text-gray-800">
                     <Link highlight href={Resume}>Resume</Link>
-                </div>
+                </div> */}
             </div>
         </footer>
     );
