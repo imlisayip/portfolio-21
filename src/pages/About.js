@@ -1,31 +1,31 @@
 import React from "react";
-import MediaText from '../components/MediaText/MediaText'
-import Text from '../components/Text/Text'
-import Feed from "react-instagram-authless-feed"
+import MediaText from "../components/MediaText/MediaText";
+import Text from "../components/Text/Text";
+import Feed from "react-instagram-authless-feed";
 import Eyebrow from "../components/Eyebrow/Eyebrow";
 import Title from "../components/Title/Title";
-import { PROFILE } from '../data/data'
+import { PROFILE } from "../data/data";
 import Link from "../components/Link/Link";
 import { renderToString } from "react-dom/server";
 
 export default function About() {
-    return (
-        <div className="my-10">
-            {MediaText({
-                title: PROFILE.title,
-                description: PROFILE.description,
-                cta: PROFILE.cta,
-                ctaLink: PROFILE.ctaLink,
-                image: PROFILE.image,
-                alt: PROFILE.alt,
-                direction: PROFILE.direction,
-                type: PROFILE.type
-            })}
+  return (
+    <main className="my-10">
+      {MediaText({
+        title: PROFILE.title,
+        description: PROFILE.description,
+        cta: PROFILE.cta,
+        ctaLink: PROFILE.ctaLink,
+        image: PROFILE.image,
+        alt: PROFILE.alt,
+        direction: PROFILE.direction,
+        type: PROFILE.type,
+      })}
 
-            {/* <div className="my-10">
+      {/* <div className="my-10">
                 <Feed userName="imlisayip" className="grid grid-cols-3 gap-4" classNameLoading="Loading" limit="6" />
             </div> */}
-            {/* <div className="my-10 grid grid-cols-1 md:grid-cols-3">
+      {/* <div className="my-10 grid grid-cols-1 md:grid-cols-3">
                 <div className="pb-8">
                     <Title type="work">Latest and Greatest</Title>
                     <p className="text-sm">As of July 2021</p>
@@ -57,6 +57,6 @@ export default function About() {
                     </div>
                 </div>
             </div> */}
-        </div >
-    );
-};
+    </main>
+  );
+}
