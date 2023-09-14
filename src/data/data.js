@@ -24,8 +24,8 @@ export const PROJECTS = [
     title: "Dreamforce 2023",
     description:
       "At Salesforce's Dreamforce 2023 conference, the focus lies in AI, Data, and CRM fusion, offering insights into AI-driven innovation for faster data-based decisions. Responsibilities included <strong>leading website enhancements</strong>, assuming leadership following a colleague's departure, supporting <strong>dynamic client needs</strong>, resolving legacy code complexities, and managing dynamic web elements and content utilizing <strong>HTML, SCSS, JavaScript, and Adobe Experience Manager (AEM)</strong>.",
-    // cta: "Visit product page",
-    // ctaLink: "https://www.fullstory.com/platform/heatmaps/",
+    cta: "Visit site",
+    ctaLink: "https://www.dreamforce.com/",
     image: SalesforceDreamforce,
     alt: "Screenshot of 2023 Salesforce Dreamforce Home page",
     direction: true,
