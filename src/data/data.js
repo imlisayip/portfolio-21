@@ -17,7 +17,7 @@ import LisaYip from "../data/sf-trolley.png";
 export const HEADER = {
   eyebrow: "hello",
   intro:
-    "Lisa Yip  is a user experience engineer open to new opportunities, exploring and living in Bay Area. ",
+    "Lisa Yip  is a user experience engineer, eager to embrace new opportunities while enjoying life in the vibrant Bay Area.",
 };
 export const PROJECTS = [
   {
@@ -94,27 +94,30 @@ export const PROFILE = {
   description: renderToString(
     <>
       <Text>
-        Hi! Thanks for stopping by. I am a User Experience Engineer actively
-        looking for new opportunities.
+        Hello! Thanks for dropping by. I'm a User Experience Engineer actively
+        on the lookout for new and exciting opportunities.
       </Text>
       <Text>
-        Previously, I delivered digital brand experiences at FullStory, Patreon,
-        Dropbox and Informatica.
+        Previously, I've had the privilege of crafting digital brand experiences
+        at FullStory, Patreon, Dropbox, and Informatica.
       </Text>
       <Text>
-        My experience includes helping companies build components and resources
-        to start a design system. I love the process of building creatively
-        through empathy, innovation and teamwork. The synergy helps me find a
-        balance between function and form.
+        My experience includes helping organizations establish the building
+        blocks for a robust design system. I'm passionate about the creative
+        process, and I believe that empathy, innovation, and teamwork are key
+        ingredients in achieving the perfect balance between functionality and
+        aesthetics.
       </Text>
       <Text>
-        I'm always trying to grow and learn something new. I lose track of time
-        when I'm volunteering at endurance events, curled up in a good book, and
-        mesmerizing new places I explore.
+        I'm a perpetual learner, always seeking new knowledge and experiences.
+        In my free time, I give back by teaching Vinyasa yoga to the community
+        and indulging in art classes. I also find myself completely engrossed
+        when volunteering at endurance events, losing track of time in the pages
+        of a good book, or exploring captivating new places.
       </Text>
       <Text>
-        Please don't hesitate to reach out— I'm happy to chat about work or
-        play!
+        Feel free to reach out—I'm more than happy to have a chat, whether it's
+        about work or leisure!
       </Text>
       <Text>
         Website built with React, Parcel, and Vercel. Set in Canela and GT
