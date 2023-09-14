@@ -1,81 +1,92 @@
 @tailwind base;
 
-
 @tailwind components;
 
-
 @font-face {
-    font-family: 'canela-thin-web';
-    font-display: fallback;
-    src: local('canela-thin-web'), url(./fonts/canela-thin-web.woff) format('woff');
-    font-weight: 200;
-    font-style: normal;
+  font-family: "canela-thin-web";
+  font-display: fallback;
+  src: local("canela-thin-web"),
+    url(./fonts/canela-thin-web.woff) format("woff");
+  font-weight: 200;
+  font-style: normal;
 }
 @font-face {
-    font-family: 'gt-america-light';
-    font-display: fallback;
-    src: local('gt-america-light'), url(./fonts/gt-america-light.woff) format('woff');
-    font-weight: normal;
-    font-style: normal;
+  font-family: "gt-america-light";
+  font-display: fallback;
+  src: local("gt-america-light"),
+    url(./fonts/gt-america-light.woff) format("woff");
+  font-weight: normal;
+  font-style: normal;
 }
 @font-face {
-    font-family: 'gt-america-medium';
-    font-display: fallback;
-    src: local('gt-america-medium'), url(./fonts/gt-america-medium.woff) format('woff');
-    font-weight: normal;
-    font-style: normal;
+  font-family: "gt-america-medium";
+  font-display: fallback;
+  src: local("gt-america-medium"),
+    url(./fonts/gt-america-medium.woff) format("woff");
+  font-weight: normal;
+  font-style: normal;
 }
 
 @tailwind utilities;
 
 @layer utilities {
-    .highlight, .active {
-	 display: inline-block;
-	 position: relative;
-	 color: #212121;
-    }
-    .highlight:hover, .active:hover {
-        color: #212121;
-    }
-    .highlight:hover:before, .active:hover:before {
-        width: 100%;
-        transition: width 0.4s ease;
-    }
-    .highlight:hover:after, .active:hover:after {
-        width: 100%;
-        background: rgba(237, 125, 49, 0.2);
-        -webkit-transition: width 0.4s ease;
-        transition: width 0.4s ease;
-    }
-    .highlight:before, .active:before {
-        background: rgba(237, 125, 49, 0.1);
-        content: "";
-        display: block;
-        position: absolute;
-        left: 5px;
-        bottom: 1px;
-        height: 30%;
-        width: 0;
-        -webkit-transition: width 0s ease, background 0.4s ease;
-        transition: width 0s ease, background 0.4s ease;
-    }
-    .highlight:after, .active:after {
-        background: rgba(237, 125, 49, 0.2);
-        content: "";
-        display: block;
-        position: absolute;
-        left: 5px;
-        bottom: 1px;
-        height: 30%;
-        width: 100%;
-        -webkit-transition: width 0s ease, background 0.4s ease;
-        transition: width 0s ease, background 0.4s ease;
-    }
-    .headroom--pinned nav {
-        box-shadow: 0 1px 2px 0 rgb(0 0 0 / 5%);
-    }
+  .highlight,
+  .active {
+    display: inline-block;
+    position: relative;
+    color: #212121;
+  }
+  .highlight:hover,
+  .active:hover {
+    color: #212121;
+  }
+  .highlight:hover:before,
+  .active:hover:before {
+    width: 100%;
+    transition: width 0.4s ease;
+  }
+  .highlight:hover:after,
+  .active:hover:after {
+    width: 100%;
+    background: rgba(237, 125, 49, 0.2);
+    -webkit-transition: width 0.4s ease;
+    transition: width 0.4s ease;
+  }
+  .highlight:before,
+  .active:before {
+    background: rgba(237, 125, 49, 0.1);
+    content: "";
+    display: block;
+    position: absolute;
+    left: 5px;
+    bottom: 1px;
+    height: 30%;
+    width: 0;
+    -webkit-transition: width 0s ease, background 0.4s ease;
+    transition: width 0s ease, background 0.4s ease;
+  }
+  .highlight:after,
+  .active:after {
+    background: rgba(237, 125, 49, 0.2);
+    content: "";
+    display: block;
+    position: absolute;
+    left: 5px;
+    bottom: 1px;
+    height: 30%;
+    width: 100%;
+    -webkit-transition: width 0s ease, background 0.4s ease;
+    transition: width 0s ease, background 0.4s ease;
+  }
+  .headroom--pinned nav {
+    box-shadow: 0 1px 2px 0 rgb(0 0 0 / 5%);
+  }
 }
 
 .content {
-    max-width: 1280px;
+  max-width: 1280px;
+  padding: 3em 1em;
+  margin: auto;
+  line-height: 1.75;
+  font-size: 1.25em;
 }

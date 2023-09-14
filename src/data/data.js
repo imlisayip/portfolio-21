@@ -23,7 +23,7 @@ export const PROJECTS = [
   {
     title: "Dreamforce 2023",
     description:
-      "At Salesforce's Dreamforce 2023 conference, the focus lies in AI, Data, and CRM fusion, offering insights into AI-driven innovation for faster data-based decisions. Responsibilities included <strong>leading website enhancements</strong>, assuming leadership following a colleague's departure, supporting <strong>dynamic client needs</strong>, resolving legacy code complexities, and managing dynamic web elements and content utilizing <strong>HTML, SCSS, JavaScript, and Adobe Experience Manager (AEM)</strong>.",
+      "At Salesforce's Dreamforce 2023 conference, the focus lies in AI, Data, and CRM fusion, offering insights into AI-driven innovation for faster data-based decisions. Responsibilities included <strong>leading website enhancement, assuming leadership following a colleague's departure, supporting dynamic client needs, resolving legacy code complexities, and managing dynamic web elements and content</strong> utilizing HTML, SCSS, JavaScript, and Adobe Experience Manager (AEM).",
     cta: "Visit site",
     ctaLink: "https://www.dreamforce.com/",
     image: SalesforceDreamforce,
@@ -125,6 +125,8 @@ export const PROFILE = {
       </Text>
       <Eyebrow>Recognition</Eyebrow>
       Yoga Alliance | Registered Yoga Teacher 200
+      <br />
+      CCACA Student Exhibition
       <br />
       FullStory Hackathon | Customer Love & Best In Show; Augmenting DXI
       <br />
