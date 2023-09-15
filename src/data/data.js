@@ -95,7 +95,8 @@ export const PROFILE = {
     <>
       <Text>
         Hello! Thanks for dropping by. I'm a User Experience Engineer actively
-        on the lookout for new and exciting opportunities.
+        on the lookout for new and exciting opportunities. I enjoy creating
+        meaningful work that packs communication within a snapshot.
       </Text>
       <Text>
         Previously, I've had the privilege of crafting digital brand experiences
@@ -123,7 +124,7 @@ export const PROFILE = {
         Website built with React, Parcel, and Vercel. Set in Canela and GT
         America.
       </Text>
-      <Eyebrow>Recognition</Eyebrow>
+      <Eyebrow>Accolades</Eyebrow>
       Yoga Alliance | Registered Yoga Teacher 200
       <br />
       CCACA Student Exhibition
