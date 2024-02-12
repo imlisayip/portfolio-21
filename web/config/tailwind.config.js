@@ -7,6 +7,7 @@ module.exports = {
         cream: '#EFE6D7',
         eyebrow: '#564A3E',
         heading: '#222222',
+        black: '#212121',
       },
     },
     fontFamily: {

@@ -11,3 +11,111 @@
 /**
  * END --- SETUP TAILWINDCSS EDIT
  */
+@layer base {
+  h1 {
+    @apply font-heading font-extralight text-heading text-6xl
+  }
+
+  h2 {
+    @apply font-heading  font-extralight text-heading text-5xl
+  }
+
+  h3 {
+    @apply font-heading  font-extralight text-heading text-4xl
+  }
+
+  h4 {
+    @apply font-heading  font-extralight text-heading text-3xl
+  }
+
+  h5 {
+    @apply font-heading  font-extralight text-heading text-2xl
+  }
+
+  h6 {
+    @apply font-heading  font-extralight text-heading text-xl
+  }
+
+  main {
+    @apply relative z-10 mb-[350px] overflow-scroll;
+  }
+
+  .highlight {
+    @apply inline-block relative ;
+     color: #212121;
+  }
+
+  .highlight:hover:before {
+         width: 100%;
+    transition: width 0.4s ease;
+  }
+
+  .highlight:hover:after,
+  .active:hover:after {
+    width: 100%;
+    background: rgba(237, 125, 49, 0.2);
+    -webkit-transition: width 0.4s ease;
+    transition: width 0.4s ease;
+  }
+
+  .highlight:before,
+  .active:before {
+    background: rgba(237, 125, 49, 0.1);
+    content: "";
+    display: block;
+    position: absolute;
+    left: 5px;
+    bottom: 1px;
+    height: 30%;
+    width: 0;
+    -webkit-transition: width 0s ease, background 0.4s ease;
+    transition: width 0s ease, background 0.4s ease;
+  }
+
+  .highlight:after,
+  .active:after {
+    background: rgba(237, 125, 49, 0.2);
+    content: "";
+    display: block;
+    position: absolute;
+    left: 5px;
+    bottom: 1px;
+    height: 30%;
+    width: 100%;
+    -webkit-transition: width 0s ease, background 0.4s ease;
+    transition: width 0s ease, background 0.4s ease;
+  }
+  /* label {
+    @apply font-handwriting text-xl uppercase tracking-tighter;
+  }
+
+  label:has(+ input:placeholder-shown) {
+    @apply pointer-events-none absolute left-8 top-8 text-3xl transition-all duration-300;
+  }
+
+  label:has(+ input),
+  label:has(+ input):focus {
+    @apply absolute left-2 top-2 text-xl;
+  }
+
+  input[type='email'],
+  input[type='number'],
+  input[type='password'],
+  input[type='tel'],
+  input[type='text'],
+  input[type='url'] {
+    @apply h-[100px] w-full border-2 border-black px-7 font-sans text-2xl;
+  } */
+
+  svg {
+    @apply fill-current;
+  }
+}
+
+@layer components {
+
+}
+
+@layer utilities {
+
+}
