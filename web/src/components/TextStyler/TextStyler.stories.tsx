@@ -12,50 +12,50 @@
 
 import type { Meta, StoryObj } from '@storybook/react'
 
-import Heading from './Heading'
+import TextStyler from './TextStyler'
 
-const meta: Meta<typeof Heading> = {
-  component: Heading,
+const meta: Meta<typeof TextStyler> = {
+  component: TextStyler,
   tags: ['autodocs'],
 }
 
 export default meta
 
-type Story = StoryObj<typeof Heading>
+type Story = StoryObj<typeof TextStyler>
 
 export const H1: Story = {
   args: {
-    level: '1',
+    level: 1,
     text: 'the brown fox jumps over the lazy dog',
   },
 }
 export const H2: Story = {
   args: {
-    level: '2',
+    level: 2,
     text: 'the brown fox jumps over the lazy dog',
   },
 }
 export const H3: Story = {
   args: {
-    level: '3',
+    level: 3,
     text: 'the brown fox jumps over the lazy dog',
   },
 }
 export const H4: Story = {
   args: {
-    level: '4',
+    level: 4,
     text: 'the brown fox jumps over the lazy dog',
   },
 }
 export const H5: Story = {
   args: {
-    level: '5',
+    level: 5,
     text: 'the brown fox jumps over the lazy dog',
   },
 }
 export const H6: Story = {
   args: {
-    level: '6',
+    level: 6,
     text: 'the brown fox jumps over the lazy dog',
   },
 }
