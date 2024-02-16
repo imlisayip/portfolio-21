@@ -23,39 +23,47 @@ export default meta
 
 type Story = StoryObj<typeof TextStyler>
 
-export const H1: Story = {
+export const Text: Story = {
   args: {
-    level: 1,
-    text: 'the brown fox jumps over the lazy dog',
+    children: 'the brown fox jumps over the lazy dog',
   },
 }
-export const H2: Story = {
+
+export const TextWithCaret: Story = {
   args: {
-    level: 2,
-    text: 'the brown fox jumps over the lazy dog',
+    caret: true,
+    children: 'the brown fox jumps over the lazy dog',
   },
 }
-export const H3: Story = {
+
+export const TextWithCaretAndHighlight: Story = {
   args: {
-    level: 3,
-    text: 'the brown fox jumps over the lazy dog',
+    caret: true,
+    children: 'the brown fox jumps over the lazy dog',
+    highlight: true,
   },
 }
-export const H4: Story = {
+
+export const Link: Story = {
   args: {
-    level: 4,
-    text: 'the brown fox jumps over the lazy dog',
+    link: '#',
+    children: 'the brown fox jumps over the lazy dog',
   },
 }
-export const H5: Story = {
+
+export const LinkWithCaret: Story = {
   args: {
-    level: 5,
-    text: 'the brown fox jumps over the lazy dog',
+    caret: true,
+    link: '#',
+    children: 'the brown fox jumps over the lazy dog',
   },
 }
-export const H6: Story = {
+
+export const LinkWithCaretAndHighlight: Story = {
   args: {
-    level: 6,
-    text: 'the brown fox jumps over the lazy dog',
+    caret: true,
+    link: '#',
+    children: 'the brown fox jumps over the lazy dog',
+    highlight: true,
   },
 }
