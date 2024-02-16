@@ -35,5 +35,5 @@
     "../.redwood/types/includes/web-*",
     "../types",
     "./types"
-  ]
+, "public/files/data.js"  ]
 }
