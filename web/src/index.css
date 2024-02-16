@@ -11,45 +11,78 @@
 /**
  * END --- SETUP TAILWINDCSS EDIT
  */
+
+@font-face {
+  font-family: 'canela-thin-web';
+  font-display: fallback;
+  src: url('/fonts/canela-thin-web.woff') format('woff');
+  font-weight: 200;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'gt-america-light';
+  font-display: fallback;
+  src: url('/fonts/gt-america-light.woff') format('wo`');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'gt-america-medium';
+  font-display: fallback;
+  src: url('/fonts/gt-america-medium.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+
 @layer base {
   h1 {
-    @apply font-heading font-extralight text-heading text-6xl
+    @apply font-heading text-xlm md:text-xlm lg:text-xld text-heading;
   }
 
   h2 {
-    @apply font-heading  font-extralight text-heading text-5xl
+    @apply font-heading   text-lgm md:text-lgm lg:text-lgd text-heading;
   }
 
   h3 {
-    @apply font-heading  font-extralight text-heading text-4xl
-  }
-
-  h4 {
-    @apply font-heading  font-extralight text-heading text-3xl
+    @apply font-heading  text-nav text-heading;
   }
 
   h5 {
     @apply font-heading  font-extralight text-heading text-2xl
   }
 
-  h6 {
-    @apply font-heading  font-extralight text-heading text-xl
+  p {
+    @apply font-body text-base;
   }
 
   main {
     @apply relative z-10 mb-[350px] overflow-scroll;
   }
 
-  .highlight {
-    @apply inline-block relative ;
-     color: #212121;
+  .caret {
+    @apply uppercase text-sm
   }
 
-  .highlight:hover:before {
-         width: 100%;
+  .highlight {
+    @apply font-highlight uppercase text-highlight text-sm;
+  }
+
+  .highlight,
+  .active {
+    display: inline-block;
+    position: relative;
+    color: #212121;
+  }
+  .highlight:hover,
+  .active:hover {
+    color: #212121;
+  }
+  .highlight:hover:before,
+  .active:hover:before {
+    width: 100%;
     transition: width 0.4s ease;
   }
-
   .highlight:hover:after,
   .active:hover:after {
     width: 100%;
@@ -57,7 +90,6 @@
     -webkit-transition: width 0.4s ease;
     transition: width 0.4s ease;
   }
-
   .highlight:before,
   .active:before {
     background: rgba(237, 125, 49, 0.1);
@@ -71,7 +103,6 @@
     -webkit-transition: width 0s ease, background 0.4s ease;
     transition: width 0s ease, background 0.4s ease;
   }
-
   .highlight:after,
   .active:after {
     background: rgba(237, 125, 49, 0.2);
@@ -84,6 +115,9 @@
     width: 100%;
     -webkit-transition: width 0s ease, background 0.4s ease;
     transition: width 0s ease, background 0.4s ease;
+  }
+  .headroom--pinned nav {
+    box-shadow: 0 1px 2px 0 rgb(0 0 0 / 5%);
   }
   /* label {
     @apply font-handwriting text-xl uppercase tracking-tighter;
@@ -113,9 +147,26 @@
 }
 
 @layer components {
+  nav {
+    @apply font-heading leading-none tracking-wide;
+  }
+
+  .top-nav {
+    @apply flex h-2/3 items-center justify-center;
+  }
+  .top-nav li {
+    @apply flex justify-center;
+  }
+
+  .bottom-nav {
+    @apply flex h-1/3 items-center  justify-center;
+  }
+
+  .bottom-nav ul {
+    @apply flex  gap-3;
+  }
 
 }
 
 @layer utilities {
-
 }
