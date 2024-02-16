@@ -1,31 +1,30 @@
-import { Link } from '@redwoodjs/router'
+import ClickToCopy from '../ClickToCopy/ClickToCopy'
+import TextStyler from '../TextStyler/TextStyler'
 
-// import Resume from '/files/YIP_Resume_24.pdf'
-
-const Footer = () => {
+const Footer = ({ linkedin, github, resume }) => {
   return (
-    <footer className="flex flex-col items-center justify-between text-center text-sm md:flex-row">
-      <div>hello@lisayip.com</div>
+    <footer className="flex flex-col items-center justify-between md:flex-row">
+      <div className="p-5">
+        <ClickToCopy text="hello@lisayip.com" />
+      </div>
+
       <div className="flex items-center">
-        <div>
-          <Link
-            className="highlight"
-            to="https://www.linkedin.com/in/imlisayip/"
-          >
+        <div className="p-5 hover:text-gray-800">
+          <TextStyler highlight link={linkedin}>
             LinkedIn
-          </Link>
+          </TextStyler>
         </div>
         <span> • </span>
-        <div>
-          <Link className="highlight" to="https://github.com/imlisayip">
+        <div className="p-5 hover:text-gray-800">
+          <TextStyler highlight link={github}>
             Github
-          </Link>
+          </TextStyler>
         </div>
         <span> • </span>
-        <div>
-          <Link className="highlight" to={'Resume'}>
+        <div className="p-5 hover:text-gray-800">
+          <TextStyler highlight link={resume}>
             Resume
-          </Link>
+          </TextStyler>
         </div>
       </div>
     </footer>
