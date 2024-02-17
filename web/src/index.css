@@ -119,27 +119,6 @@
   .headroom--pinned nav {
     box-shadow: 0 1px 2px 0 rgb(0 0 0 / 5%);
   }
-  /* label {
-    @apply font-handwriting text-xl uppercase tracking-tighter;
-  }
-
-  label:has(+ input:placeholder-shown) {
-    @apply pointer-events-none absolute left-8 top-8 text-3xl transition-all duration-300;
-  }
-
-  label:has(+ input),
-  label:has(+ input):focus {
-    @apply absolute left-2 top-2 text-xl;
-  }
-
-  input[type='email'],
-  input[type='number'],
-  input[type='password'],
-  input[type='tel'],
-  input[type='text'],
-  input[type='url'] {
-    @apply h-[100px] w-full border-2 border-black px-7 font-sans text-2xl;
-  } */
 
   svg {
     @apply fill-current;
