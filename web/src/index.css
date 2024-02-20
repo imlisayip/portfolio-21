@@ -48,9 +48,6 @@
     @apply font-heading  text-nav text-heading;
   }
 
-  h5 {
-    @apply font-heading  font-extralight text-heading text-2xl
-  }
 
   p {
     @apply font-body text-base;
