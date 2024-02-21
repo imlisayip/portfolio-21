@@ -12,7 +12,7 @@ import WorkInProgress from '../images/work-in-progress.png'
 export const HEADER = {
   eyebrow: 'hello',
   intro:
-    'Lisa Yip is a front end engineer, eager to embrace new opportunities.',
+    'Lisa Yip, a front end engineer, with a passion for crafting intuitive and impactful user experiences,  is open to engaging with innovative projects and teams.',
 }
 export const PROJECTS = [
   {

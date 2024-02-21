@@ -36,14 +36,15 @@ const AboutBioCard = ({
         })}
 
         {accomplishments.map((section, index) => {
-          if (section.cta) {
             return (
-              <TextStyler key={index} link={section.cta} caret>
-                {section.event}
-              </TextStyler>
-            )
-          }
-          return <p key={index}>{section.event}</p>
+            <p key={index} className="leading-7">
+              {section.cta ? (
+                <a href={section.cta}>{section.event}</a>
+              ) : (
+                <div>{section.event}</div>
+              )}
+            </p>
+          )
         })}
       </div>
     </div>

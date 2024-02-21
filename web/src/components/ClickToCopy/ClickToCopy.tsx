@@ -29,10 +29,12 @@ const ClickToCopy = ({ text }) => {
       role="button"
       aria-pressed="false"
     >
-      <p className="highlight">{text}</p>
       {isCopied && (
-        <div className="absolute text-center text-sm">Copied to clipboard!</div>
+        <div className="absolute bottom-6 right-0 text-center text-sm">
+          Copied to clipboard!
+        </div>
       )}
+      <p className="highlight">{text}</p>
     </div>
   )
 }

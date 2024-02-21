@@ -33,7 +33,7 @@ const PortfolioLayout = ({ children }: PortfolioLayoutProps) => {
   return (
     <>
       <main className="m-0 grid min-h-screen grid-cols-12 bg-white">
-        <div className="relative col-span-12 m-0 bg-cream px-6 sm:m-6">
+        <div className="relative col-span-12 m-0 bg-cream px-5 sm:m-6">
           <aside className="h-16 sm:h-24">
             <Nav isOpen={isOpen} toggleHamburger={toggleHamburger} />
           </aside>
