@@ -1,5 +1,3 @@
-import { Link } from '@redwoodjs/router'
-
 interface TextStylerProps {
   link?: string
   caret?: boolean
@@ -20,9 +18,14 @@ const TextStyler = ({
 
   if (link) {
     return (
-      <Link className={classList} to={link}>
+      <a
+        target="_blank"
+        rel="noopener noreferrer"
+        className={classList}
+        href={link}
+      >
         {content}
-      </Link>
+      </a>
     )
   }
 
