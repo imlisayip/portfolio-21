@@ -22,7 +22,7 @@ const AboutBioCard = ({
         <img src={image} alt={alt} />
       </div>
 
-      <div className={`sm:w-7/12 md:w-6/12 lg:w-5/12`}>
+      <div className={`sm:w-8/12 md:w-7/12 lg:w-6/12`}>
         <h2 className="pb-6 text-center text-name sm:text-left">{heading}</h2>
 
         {body.map((section, index) => {
