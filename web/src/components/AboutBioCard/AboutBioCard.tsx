@@ -35,6 +35,9 @@ const AboutBioCard = ({
           )
         })}
 
+        <div className="py-6 sm:py-3.5">
+          <TextStyler caret>Recognition</TextStyler>
+        </div>
         {accomplishments.map((section, index) => {
             return (
             <p key={index} className="leading-7">
