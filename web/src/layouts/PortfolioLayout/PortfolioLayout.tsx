@@ -37,7 +37,7 @@ const PortfolioLayout = ({ children }: PortfolioLayoutProps) => {
           <aside className="h-16 sm:h-24">
             <Nav isOpen={isOpen} toggleHamburger={toggleHamburger} />
           </aside>
-          <div className="mx-auto max-w-[1440px] pb-24 sm:pb-0">{children}</div>
+          <div className="mx-auto max-w-[1280px] pb-24 sm:pb-0">{children}</div>
           <div className="absolute bottom-0 -ml-6 h-32 w-full md:h-16 ">
             <Footer linkedin={LINKEDIN} github={GITHUB} resume={RESUME} />
           </div>
