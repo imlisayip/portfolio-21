@@ -6,6 +6,7 @@ import Product from '../images/patreon-product.png'
 import SalesforceDreamforce from '../images/salesforce-dreamforce.png'
 import LisaYip from '../images/sf-trolley.png'
 import WorkInProgress from '../images/work-in-progress.png'
+import YIR from '../images/YIR.png'
 
 // import RESUMEPATH from './YIP_Resume_24.pdf'
 
@@ -15,6 +16,14 @@ export const HEADER = {
     'Lisa Yip, a front end engineer, with a passion for crafting intuitive and impactful user experiences,  is open to engaging with innovative projects and teams.',
 }
 export const PROJECTS = [
+  {
+    title: 'Nike Year End Review ',
+    description: `Nike's 'Year in Review' offers a personalized and holistic journey for members, celebrating 2023's achievements and setting future goals. The project, crafted with <strong>React</strong>, incorporates <strong>i18n for global localization</strong>, ensures seamless experience, and utilizes a comprehensive <strong>design system</strong>, showcasing the synergy of various expertises to forge a truly international and user-focused experience.`,
+    cta: 'Visit case study',
+    ctaLink: 'https://www.instrument.com/work/nike-year-in-review',
+    image: YIR,
+    alt: 'Screenshot of 2023 Salesforce Dreamforce Home page',
+  },
   {
     title: 'Dreamforce 2023',
     description:
