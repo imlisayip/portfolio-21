@@ -8,7 +8,7 @@ import LisaYip from '../images/sf-trolley.png'
 import WorkInProgress from '../images/work-in-progress.png'
 import YIR from '../images/YIR.png'
 
-// import RESUMEPATH from './YIP_Resume_24.pdf'
+import RESUMEPATH from './YIP_Resume_24.pdf'
 
 export const HEADER = {
   eyebrow: 'hello',
@@ -139,4 +139,4 @@ export const PROFILE = {
 }
 export const LINKEDIN = 'https://www.linkedin.com/in/imlisayip/'
 export const GITHUB = 'https://github.com/imlisayip'
-export const RESUME = 'RESUMEPATH'
+export const RESUME = RESUMEPATH
