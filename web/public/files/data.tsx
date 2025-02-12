@@ -8,7 +8,7 @@ import LisaYip from '../images/sf-trolley.png'
 import WorkInProgress from '../images/work-in-progress.png'
 import YIR from '../images/YIR.png'
 
-import RESUMEPATH from './YIP_Resume_24.pdf'
+import RESUMEPATH from './YIP_Resume_25.pdf'
 
 export const HEADER = {
   eyebrow: 'hello',
