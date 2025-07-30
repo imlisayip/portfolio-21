@@ -1,18 +1,5 @@
-.idea
-.DS_Store
-.env
-.netlify
-.redwood/*
-!.redwood/README.md
-dev.db*
-dist
-dist-babel
-node_modules
-yarn-error.log
-web/public/mockServiceWorker.js
-web/types/graphql.d.ts
-api/types/graphql.d.ts
-api/src/lib/generateGraphiQLHeader.*
+# Dependencies
+node_modules/
 .pnp.*
 .yarn/*
 !.yarn/patches
@@ -20,3 +7,134 @@ api/src/lib/generateGraphiQLHeader.*
 !.yarn/releases
 !.yarn/sdks
 !.yarn/versions
+
+# Environment variables
+.env
+.env.local
+.env.development.local
+.env.test.local
+.env.production.local
+
+# Build outputs
+dist/
+dist-babel/
+build/
+.next/
+out/
+
+# RedwoodJS specific
+.redwood/*
+!.redwood/README.md
+api/dist/
+api/types/
+web/types/
+web/public/mockServiceWorker.js
+api/src/lib/generateGraphiQLHeader.*
+
+# Database
+dev.db*
+*.db
+*.sqlite
+*.sqlite3
+
+# Logs
+*.log
+yarn-error.log*
+npm-debug.log*
+lerna-debug.log*
+.pnpm-debug.log*
+
+# Runtime data
+pids
+*.pid
+*.seed
+*.pid.lock
+
+# Coverage directory used by tools like istanbul
+coverage/
+*.lcov
+
+# nyc test coverage
+.nyc_output
+
+# Dependency directories
+jspm_packages/
+
+# Optional npm cache directory
+.npm
+
+# Optional eslint cache
+.eslintcache
+
+# Microbundle cache
+.rpt2_cache/
+.rts2_cache_cjs/
+.rts2_cache_es/
+.rts2_cache_umd/
+
+# Optional REPL history
+.node_repl_history
+
+# Output of 'npm pack'
+*.tgz
+
+# Yarn Integrity file
+.yarn-integrity
+
+# parcel-bundler cache (https://parceljs.org/)
+.cache
+.parcel-cache
+
+# Next.js build output
+.next
+
+# Nuxt.js build / generate output
+.nuxt
+dist
+
+# Gatsby files
+.cache/
+public
+
+# Storybook build outputs
+.out
+.storybook-out
+
+# Temporary folders
+tmp/
+temp/
+
+# Editor directories and files
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# OS generated files
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+
+# Netlify
+.netlify
+
+# Vercel
+.vercel
+
+# Testing
+coverage/
+.nyc_output/
+
+# TypeScript
+*.tsbuildinfo
+
+# Optional: Uncomment if you want to ignore local development files
+# .env.local
+# .env.development.local
+# .env.test.local
+# .env.production.local
