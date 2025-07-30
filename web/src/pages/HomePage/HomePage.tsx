@@ -7,8 +7,16 @@ import { HEADER, PROJECTS } from '../../../public/files/data'
 
 const HomePage = () => {
   return (
-    <div className="mt-10 sm:mb-40 md:mb-24">
-      <Metadata title="Home" description="Home page" />
+    <main className="mt-10 sm:mb-40 md:mb-24">
+      <Metadata
+        title="Lisa Yip - Front End Engineer"
+        description="Front End Engineer with experience at FullStory, Patreon, and Dropbox. Specializing in React, TypeScript, and creating impactful user experiences."
+        og={{
+          title: "Lisa Yip - Front End Engineer",
+          description: "Front End Engineer with experience at FullStory, Patreon, and Dropbox. Specializing in React, TypeScript, and creating impactful user experiences.",
+          type: "website"
+        }}
+      />
 
       <Hero eyebrow={HEADER.eyebrow} intro={HEADER.intro} />
       {PROJECTS.map((project, index) => {
@@ -23,7 +31,7 @@ const HomePage = () => {
           direction: project.direction,
         })
       })}
-    </div>
+    </main>
   )
 }
 
