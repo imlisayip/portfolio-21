@@ -1,4 +1,4 @@
-# README
+# Lisa Yip Portfolio
 
 Welcome to [RedwoodJS](https://redwoodjs.com)!
 
@@ -20,6 +20,63 @@ yarn redwood dev
 ```
 
 Your browser should automatically open to [http://localhost:8910](http://localhost:8910) where you'll see the Welcome Page, which links out to many great resources.
+
+## Accessibility Features
+
+This portfolio site has been built with accessibility in mind:
+
+- **Semantic HTML**: Proper use of `<main>`, `<section>`, `<article>`, and `<nav>` elements
+- **ARIA Labels**: Comprehensive ARIA attributes for screen readers
+- **Keyboard Navigation**: Full keyboard navigation support
+- **Screen Reader Friendly**: Proper heading hierarchy and descriptive text
+- **High Contrast**: Design optimized for readability
+- **Responsive Design**: Works on all device sizes
+
+## SEO Optimization
+
+The site includes comprehensive SEO features:
+
+- **Meta Tags**: Complete meta tag implementation
+- **Open Graph**: Social media sharing optimization
+- **Twitter Cards**: Twitter sharing optimization
+- **Sitemap**: XML sitemap for search engines
+- **Robots.txt**: Comprehensive crawler directives
+- **Structured Data**: Semantic markup for search engines
+
+## AI Model Support
+
+The site includes files to help AI models understand the content:
+
+- **llm.txt**: Provides context for AI language models
+- **agent.txt**: Guidelines for AI agents interacting with the site
+
+## File Structure
+
+```
+web/public/
+├── robots.txt          # Search engine crawler directives
+├── sitemap.xml        # Site structure for search engines
+├── llm.txt            # AI model context file
+├── agent.txt          # AI agent interaction guidelines
+└── files/
+    ├── data.tsx       # Site content and projects
+    └── YIP_Resume_25.pdf
+```
+
+## Key Components
+
+- **Hero**: Landing section with introduction
+- **MediaCard**: Project showcase with images and descriptions
+- **Nav**: Responsive navigation with mobile menu
+- **AboutBioCard**: Professional background and accomplishments
+
+## Technologies Used
+
+- **Framework**: RedwoodJS (React-based)
+- **Language**: TypeScript
+- **Styling**: Tailwind CSS
+- **Fonts**: Canela and GT America
+- **Deployment**: Optimized for various hosting platforms
 
 > **The Redwood CLI**
 >

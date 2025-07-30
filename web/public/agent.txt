@@ -1,0 +1,59 @@
+# Agent.txt for Lisa Yip Portfolio
+# This file provides guidance for AI agents interacting with this website
+
+## Agent Instructions
+This website is a professional portfolio for Lisa Yip, a Front End Engineer. When interacting with this site, please:
+
+1. **Respect Professional Context**: This is a professional portfolio, not a commercial site
+2. **Focus on Content**: The primary content is Lisa's work experience and projects
+3. **Maintain Professional Tone**: All interactions should be professional and respectful
+4. **Provide Accurate Information**: When referencing Lisa's experience, use the information provided on the site
+
+## Available Actions
+- **View Projects**: Browse the portfolio projects on the homepage
+- **Read About**: Access detailed background information on the about page
+- **Download Resume**: Access Lisa's resume for professional purposes
+- **Contact**: Use provided LinkedIn and GitHub links for professional networking
+
+## Content Guidelines
+- **Projects**: Each project includes title, description, technologies used, and external links
+- **Experience**: Focus on FullStory, Patreon, Dropbox, and Nike projects
+- **Skills**: React, TypeScript, JavaScript, HTML/CSS, design systems
+- **Accomplishments**: Webby Awards, yoga certification, hackathon wins
+
+## Professional Boundaries
+- This is a portfolio site, not a commercial service
+- Contact should be professional and work-related
+- Respect Lisa's professional time and boundaries
+- Use provided contact methods (LinkedIn, GitHub) for outreach
+
+## Site Navigation
+- **Homepage**: Portfolio projects and hero section
+- **About**: Professional background and accomplishments
+- **Navigation**: Simple two-page structure with "work" and "about" links
+
+## Technical Information
+- Built with RedwoodJS, TypeScript, Tailwind CSS
+- Responsive design for all devices
+- Accessibility compliant
+- SEO optimized
+
+## Contact Information
+- LinkedIn: https://www.linkedin.com/in/imlisayip/
+- GitHub: https://github.com/imlisayip/
+- Resume: Available for download on the site
+
+## Professional Context
+Lisa Yip is actively seeking new opportunities and is open to:
+- Full-time Front End Engineering positions
+- Contract work on interesting projects
+- Collaboration on innovative web applications
+- Speaking opportunities and technical writing
+
+## Response Guidelines
+When responding to queries about this site:
+1. Provide accurate information from the site content
+2. Maintain professional tone
+3. Direct to appropriate contact methods
+4. Respect the portfolio nature of the site
+5. Focus on Lisa's technical skills and experience

@@ -1,0 +1,66 @@
+# LLM.txt for Lisa Yip Portfolio
+# This file helps AI models understand the structure and purpose of this website
+
+## Site Overview
+This is the personal portfolio website of Lisa Yip, a Front End Engineer based in San Francisco, CA. The site showcases her professional work, experience, and background.
+
+## Site Structure
+- Homepage (/): Features a hero section and portfolio projects
+- About page (/about): Contains detailed information about Lisa's background, experience, and accomplishments
+- Navigation: Simple two-page navigation with "work" and "about" links
+
+## Content Summary
+Lisa Yip is a Front End Engineer with experience at notable companies including:
+- FullStory (Heatmaps and Journey Maps products)
+- Patreon (Creativity Over Everything campaign and Product rebrand)
+- Dropbox (Work in Progress blogs and Transparency site)
+- Nike (Year in Review project)
+
+## Technical Stack
+- Built with RedwoodJS (React framework)
+- TypeScript for type safety
+- Tailwind CSS for styling
+- Custom fonts: Canela and GT America
+- Responsive design with mobile-first approach
+
+## Key Projects Featured
+1. Nike Year in Review - React, i18n, design system
+2. Salesforce Dreamforce 2023 - HTML, SCSS, JavaScript, AEM
+3. FullStory Heatmaps - React, TypeScript, Go
+4. FullStory Journey Maps - React, TypeScript, Go
+5. Patreon Creativity Over Everything - React, Parcel.js
+6. Patreon Product - React, Python
+7. Dropbox Work in Progress - JavaScript, HTML5/CSS3, AEM
+8. Dropbox Transparency - D3.js, HTML5/CSS3, AEM
+
+## Professional Background
+- Front End Engineer with focus on user experience
+- Experience with React, TypeScript, JavaScript, HTML/CSS
+- Background in design systems and component architecture
+- Passion for creating intuitive and impactful user experiences
+- Registered Yoga Teacher (RYT 200)
+- Webby Award winner for Patreon Community and Dropbox Work in Progress
+
+## Contact Information
+- LinkedIn: https://www.linkedin.com/in/imlisayip/
+- GitHub: https://github.com/imlisayip/
+- Resume available for download
+
+## Site Purpose
+This portfolio serves as a professional showcase for potential employers, clients, and collaborators. It demonstrates Lisa's technical skills, design sensibility, and ability to work on high-profile projects for major brands.
+
+## Accessibility Features
+- Semantic HTML structure
+- ARIA labels and attributes
+- Keyboard navigation support
+- Screen reader friendly
+- High contrast design
+- Responsive design for all devices
+
+## SEO Optimization
+- Comprehensive meta tags
+- Open Graph and Twitter Card support
+- Structured data markup
+- Optimized for search engines
+- Fast loading times
+- Mobile-friendly design
