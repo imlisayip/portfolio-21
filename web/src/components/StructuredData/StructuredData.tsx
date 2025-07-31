@@ -69,4 +69,4 @@ const StructuredData: React.FC<StructuredDataProps> = ({ type = 'person' }) => {
   )
 }
 
-export default StructuredData 
+export default StructuredData

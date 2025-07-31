@@ -39,4 +39,4 @@ export const useIntersectionObserver = (
   }, [options.threshold, options.rootMargin, options.root])
 
   return { elementRef, isIntersecting, hasIntersected }
-} 
+}

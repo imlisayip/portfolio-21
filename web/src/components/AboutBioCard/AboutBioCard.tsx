@@ -1,3 +1,6 @@
+import React from 'react'
+
+import OptimizedImage from '../OptimizedImage/OptimizedImage'
 import TextStyler from '../TextStyler/TextStyler'
 
 interface AboutBioCardProps {
@@ -7,7 +10,7 @@ interface AboutBioCardProps {
   alt: string
   accomplishments: { event: string; cta: string }[]
 }
-const AboutBioCard = ({
+const AboutBioCard = React.memo(({
   heading,
   body,
   image,
@@ -19,7 +22,13 @@ const AboutBioCard = ({
       <div
         className={`max-w-xl pb-6  sm:mr-4 sm:mt-10 sm:w-5/12 md:mt-12 md:w-4/12 lg:mr-8 lg:mt-20 lg:w-4/12`}
       >
-        <img src={image} alt={alt} />
+        <OptimizedImage
+          src={image}
+          alt={alt}
+          className="w-full h-auto"
+          loading="lazy"
+          decoding="async"
+        />
       </div>
 
       <div className={`sm:w-8/12 md:w-7/12 lg:w-6/12`}>
@@ -43,7 +52,7 @@ const AboutBioCard = ({
               return (
               <li key={index} className="leading-7">
                 {section.cta ? (
-                  <a
+                  <a 
                     href={section.cta}
                     target="_blank"
                     rel="noopener noreferrer"
@@ -61,6 +70,8 @@ const AboutBioCard = ({
       </div>
     </article>
   )
-}
+})
+
+AboutBioCard.displayName = 'AboutBioCard'
 
 export default AboutBioCard
