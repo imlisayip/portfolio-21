@@ -10,6 +10,14 @@ import YIR from '../images/YIR.png'
 
 import RESUMEPATH from './YIP_Resume_25.pdf'
 
+// Contact information from constants
+const CONTACT_INFO = {
+  email: 'hello@lisayip.com',
+  linkedin: 'https://www.linkedin.com/in/imlisayip/',
+  github: 'https://github.com/imlisayip/',
+  website: 'https://lisayip.com'
+}
+
 export const HEADER = {
   eyebrow: 'hello',
   intro:
@@ -100,7 +108,7 @@ export const PROFILE = {
         lookout for new and exciting opportunities. I enjoy creating meaningful
         work that packs communication within a snapshot.`,
     `Previously, I've had the privilege of crafting digital brand experiences
-        at FullStory, Patreon, and Dropbox.`,
+        at Instrument, FullStory, Patreon, and Dropbox.`,
     `My experience includes helping organizations establish the building
         blocks for a robust design system. I'm passionate about the creative
         process, and I believe that empathy, innovation, and teamwork are key
@@ -137,6 +145,6 @@ export const PROFILE = {
   alt: 'A woman stands on a cable car, smiling, wearing a hat, sunglasses, maroon top, and mustard pants, with city buildings in the background.',
   type: 'about',
 }
-export const LINKEDIN = 'https://www.linkedin.com/in/imlisayip/'
-export const GITHUB = 'https://github.com/imlisayip'
+export const LINKEDIN = CONTACT_INFO.linkedin
+export const GITHUB = CONTACT_INFO.github
 export const RESUME = RESUMEPATH

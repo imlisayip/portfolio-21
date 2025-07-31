@@ -17,7 +17,7 @@ This website is a professional portfolio for Lisa Yip, a Front End Engineer. Whe
 
 ## Content Guidelines
 - **Projects**: Each project includes title, description, technologies used, and external links
-- **Experience**: Focus on FullStory, Patreon, Dropbox, and Nike projects
+- **Experience**: Focus on Instrument, FullStory, Patreon, and Dropbox projects
 - **Skills**: React, TypeScript, JavaScript, HTML/CSS, design systems
 - **Accomplishments**: Webby Awards, yoga certification, hackathon wins
 

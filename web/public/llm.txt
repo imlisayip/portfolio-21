@@ -12,10 +12,10 @@ This is the personal portfolio website of Lisa Yip, a Front End Engineer based i
 
 ## Content Summary
 Lisa Yip is a Front End Engineer with experience at notable companies including:
+- Instrument (Nike Year in Review project)
 - FullStory (Heatmaps and Journey Maps products)
 - Patreon (Creativity Over Everything campaign and Product rebrand)
 - Dropbox (Work in Progress blogs and Transparency site)
-- Nike (Year in Review project)
 
 ## Technical Stack
 - Built with RedwoodJS (React framework)
@@ -46,6 +46,7 @@ Lisa Yip is a Front End Engineer with experience at notable companies including:
 - LinkedIn: https://www.linkedin.com/in/imlisayip/
 - GitHub: https://github.com/imlisayip/
 - Resume available for download
+- Website: https://lisayip.com
 
 ## Site Purpose
 This portfolio serves as a professional showcase for potential employers, clients, and collaborators. It demonstrates Lisa's technical skills, design sensibility, and ability to work on high-profile projects for major brands.
