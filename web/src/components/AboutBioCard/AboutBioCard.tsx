@@ -52,7 +52,7 @@ const AboutBioCard = React.memo(({
               return (
               <li key={index} className="leading-7">
                 {section.cta ? (
-                  <a 
+                  <a
                     href={section.cta}
                     target="_blank"
                     rel="noopener noreferrer"

@@ -18,18 +18,18 @@ const HomePage = () => {
       />
 
       <Hero eyebrow={HEADER.eyebrow} intro={HEADER.intro} />
-      {PROJECTS.map((project, index) => {
-        return MediaCard({
-          key: index,
-          heading: project.title,
-          body: project.description,
-          cta: project.cta,
-          ctaLink: project.ctaLink,
-          image: project.image,
-          alt: project.alt,
-          direction: project.direction as 'left' | 'right',
-        })
-      })}
+      {PROJECTS.map((project, index) => (
+        <MediaCard
+          key={index}
+          heading={project.title}
+          body={project.description}
+          cta={project.cta}
+          ctaLink={project.ctaLink}
+          image={project.image}
+          alt={project.alt}
+          direction={project.direction as 'left' | 'right'}
+        />
+      ))}
     </main>
   )
 }

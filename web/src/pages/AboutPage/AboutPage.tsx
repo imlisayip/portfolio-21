@@ -19,13 +19,13 @@ const AboutPage = () => {
         og={metaTags.openGraph}
       />
 
-      {AboutBioCard({
-        heading: PROFILE.title,
-        body: PROFILE.description,
-        image: PROFILE.image,
-        alt: PROFILE.alt,
-        accomplishments: PROFILE.accomplishments,
-      })}
+      <AboutBioCard
+        heading={PROFILE.title}
+        body={PROFILE.description}
+        image={PROFILE.image}
+        alt={PROFILE.alt}
+        accomplishments={PROFILE.accomplishments}
+      />
     </main>
   )
 }

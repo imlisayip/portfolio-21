@@ -19,12 +19,12 @@ const OptimizedImage: React.FC<OptimizedImageProps> = ({
 }) => {
   // Convert PNG path to WebP path
   const webpSrc = src.replace(/\.png$/, '.webp')
-  
+
   return (
     <picture>
       {/* WebP version for modern browsers */}
       <source srcSet={webpSrc} type="image/webp" />
-      
+
       {/* PNG fallback for older browsers */}
       <img
         src={src}
@@ -38,4 +38,4 @@ const OptimizedImage: React.FC<OptimizedImageProps> = ({
   )
 }
 
-export default OptimizedImage 
+export default OptimizedImage

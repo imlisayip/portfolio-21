@@ -11,7 +11,6 @@ interface MediaCardProps {
   ctaLink: string
   image: string
   alt: string
-  key: number
 }
 
 const MediaCard = React.memo(({
@@ -22,18 +21,16 @@ const MediaCard = React.memo(({
   cta,
   image,
   alt,
-  key,
 }: MediaCardProps) => {
   return (
     <article
-      key={key}
       className={`my-16 flex flex-col justify-center   ${
         direction === 'left' ? 'md:flex-row' : 'md:flex-row-reverse'
       }`}
-      aria-labelledby={`project-heading-${key}`}
+      aria-labelledby={`project-heading`}
     >
       <div className={`max-w-4xl pb-6 md:w-6/12  lg:w-8/12`}>
-        <a 
+        <a
           href={ctaLink}
           aria-label={`View ${heading} project`}
           target="_blank"
@@ -58,11 +55,11 @@ const MediaCard = React.memo(({
           direction === 'left' ? '' : 'md:text-right'
         }`}
       >
-        <h2 id={`project-heading-${key}`} className="pb-6 text-lgm md:text-lgt lg:text-lgd">{heading}</h2>
+        <h2 id={`project-heading`} className="pb-6 text-lgm md:text-lgt lg:text-lgd">{heading}</h2>
         <div
           dangerouslySetInnerHTML={{ __html: body }}
           className="pb-6 sm:pb-3.5"
-          aria-describedby={`project-heading-${key}`}
+          aria-describedby={`project-heading`}
         />
         <TextStyler link={ctaLink} caret highlight>
           {cta}
