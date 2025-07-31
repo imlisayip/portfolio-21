@@ -79,4 +79,4 @@ The following commands are available:
 - This is a static site deployment (frontend only)
 - No database or API functions are currently used
 - All assets are optimized for production
-- SEO and accessibility features are included 
+- SEO and accessibility features are included

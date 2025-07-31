@@ -11,6 +11,26 @@ dns.setDefaultResultOrder('verbatim')
 
 const viteConfig: UserConfig = {
   plugins: [redwood()],
+  build: {
+    rollupOptions: {
+      output: {
+        manualChunks: {
+          vendor: ['react', 'react-dom'],
+          router: ['@redwoodjs/router'],
+          analytics: ['@vercel/analytics']
+        }
+      }
+    },
+    chunkSizeWarningLimit: 1000
+  },
+  optimizeDeps: {
+    include: ['react', 'react-dom', '@redwoodjs/router']
+  },
+  server: {
+    headers: {
+      'Cache-Control': 'public, max-age=31536000, immutable'
+    }
+  }
 }
 
 export default defineConfig(viteConfig)

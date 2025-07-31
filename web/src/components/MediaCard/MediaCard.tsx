@@ -30,13 +30,23 @@ const MediaCard = ({
       aria-labelledby={`project-heading-${key}`}
     >
       <div className={`max-w-4xl pb-6 md:w-6/12  lg:w-8/12`}>
-        <a
+        <a 
           href={ctaLink}
           aria-label={`View ${heading} project`}
           target="_blank"
           rel="noopener noreferrer"
         >
-          <img src={image} alt={alt} />
+          <img 
+            src={image} 
+            alt={alt} 
+            loading="lazy"
+            decoding="async"
+            className="w-full h-auto"
+            onError={(e) => {
+              const target = e.target as HTMLImageElement;
+              target.style.display = 'none';
+            }}
+          />
         </a>
       </div>
 
