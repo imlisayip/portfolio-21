@@ -63,4 +63,4 @@ export const TWITTER_CARD = {
   title: SITE_CONFIG.title,
   description: SITE_CONFIG.description,
   image: SITE_CONFIG.image
-} 
+}

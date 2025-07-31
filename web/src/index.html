@@ -16,7 +16,7 @@
 
   <!-- Open Graph / Facebook -->
   <meta property="og:type" content="website" />
-    <meta property="og:url" content="https://lisayip.com/" />
+  <meta property="og:url" content="https://lisayip.com/" />
   <meta property="og:title" content="Lisa Yip - Front End Engineer" />
   <meta property="og:description" content="Front End Engineer with experience at Instrument, FullStory, Patreon, and Dropbox. Specializing in React, TypeScript, and creating impactful user experiences." />
   <meta property="og:image" content="https://lisayip.com/images/lisa-yip-profile.jpg" />
@@ -37,6 +37,15 @@
   <!-- Preconnect to external domains -->
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+
+  <!-- Preload critical resources -->
+  <link rel="preload" href="/favicon.png" as="image" type="image/png" />
+  <link rel="preload" href="/fonts/canela-thin-web.woff" as="font" type="font/woff" crossorigin />
+  <link rel="preload" href="/fonts/gt-america-light.woff" as="font" type="font/woff" crossorigin />
+
+  <!-- DNS prefetch for external domains -->
+  <link rel="dns-prefetch" href="//fonts.googleapis.com" />
+  <link rel="dns-prefetch" href="//fonts.gstatic.com" />
 
   <link rel="icon" type="image/png" href="/favicon.png" />
 </head>

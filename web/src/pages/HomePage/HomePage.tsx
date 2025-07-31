@@ -11,7 +11,7 @@ const HomePage = () => {
 
   return (
     <main className="mt-10 sm:mb-40 md:mb-24">
-      <Metadata 
+      <Metadata
         title={metaTags.title}
         description={metaTags.description}
         og={metaTags.openGraph}

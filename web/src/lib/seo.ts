@@ -27,7 +27,7 @@ export const generateMetaTags = () => {
 
 export const generatePageMetaTags = (pageTitle?: string, pageDescription?: string) => {
   const baseMeta = generateMetaTags()
-  
+
   return {
     title: pageTitle ? `${pageTitle} | ${SITE_CONFIG.title}` : SITE_CONFIG.title,
     description: pageDescription || SITE_CONFIG.description,
@@ -45,4 +45,4 @@ export const generatePageMetaTags = (pageTitle?: string, pageDescription?: strin
       description: pageDescription || SITE_CONFIG.description
     }
   }
-} 
+}

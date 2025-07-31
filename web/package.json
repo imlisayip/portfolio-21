@@ -10,6 +10,13 @@
       "defaults"
     ]
   },
+  "scripts": {
+    "build": "vite build",
+    "dev": "vite",
+    "preview": "vite preview",
+    "analyze": "vite build --mode analyze",
+    "bundle-report": "npx vite-bundle-analyzer dist"
+  },
   "dependencies": {
     "@redwoodjs/forms": "7.0.2",
     "@redwoodjs/router": "7.0.2",
@@ -25,6 +32,7 @@
     "autoprefixer": "^10.4.17",
     "postcss": "^8.4.35",
     "postcss-loader": "^8.1.0",
-    "tailwindcss": "^3.4.1"
+    "tailwindcss": "^3.4.1",
+    "vite-bundle-analyzer": "^0.7.0"
   }
 }
