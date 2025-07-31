@@ -52,7 +52,7 @@ const ClickToCopy = ({ text, className = '', onCopy }: ClickToCopyProps) => {
       aria-label={`Copy ${text} to clipboard`}
     >
       {isCopied && (
-        <div 
+        <div
           className="absolute bottom-6 right-0 text-center text-sm bg-green-100 text-green-800 px-2 py-1 rounded shadow-sm"
           role="status"
           aria-live="polite"

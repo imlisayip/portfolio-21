@@ -8,6 +8,7 @@ This is the personal portfolio website of Lisa Yip, a Front End Engineer based i
 - Homepage (/): Features a hero section and portfolio projects
 - About page (/about): Contains detailed information about Lisa's background, experience, and accomplishments
 - Navigation: Simple two-page navigation with "work" and "about" links
+- Domain: https://lisayip.com
 
 ## Content Summary
 Lisa Yip is a Front End Engineer with experience at notable companies including:

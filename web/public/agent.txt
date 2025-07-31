@@ -42,6 +42,7 @@ This website is a professional portfolio for Lisa Yip, a Front End Engineer. Whe
 - LinkedIn: https://www.linkedin.com/in/imlisayip/
 - GitHub: https://github.com/imlisayip/
 - Resume: Available for download on the site
+- Website: https://lisayip.com
 
 ## Professional Context
 Lisa Yip is actively seeking new opportunities and is open to:

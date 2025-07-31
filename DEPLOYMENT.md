@@ -9,6 +9,7 @@ This portfolio is configured for deployment on Vercel with the following setup:
 1. **vercel.json** - Main Vercel configuration
 2. **package.json** - Contains build scripts
 3. **.nvmrc** - Specifies Node.js version (20.x)
+4. **Domain**: https://lisayip.com
 
 ### Build Process
 

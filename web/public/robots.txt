@@ -1,11 +1,11 @@
 # Robots.txt for Lisa Yip Portfolio
-# https://lisayip.dev/robots.txt
+# https://lisayip.com/robots.txt
 
 User-agent: *
 Allow: /
 
 # Sitemap location
-Sitemap: https://lisayip.dev/sitemap.xml
+Sitemap: https://lisayip.com/sitemap.xml
 
 # Crawl-delay for respectful crawling
 Crawl-delay: 1
