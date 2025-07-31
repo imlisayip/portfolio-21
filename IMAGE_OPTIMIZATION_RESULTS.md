@@ -80,4 +80,4 @@
 ### **Browser Support**
 - **WebP**: Chrome, Firefox, Safari 14+, Edge
 - **PNG Fallback**: All browsers
-- **Progressive Enhancement**: Better performance where supported 
+- **Progressive Enhancement**: Better performance where supported

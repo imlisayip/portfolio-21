@@ -9,7 +9,7 @@
   "scripts": {
     "build": "yarn rw build web",
     "dev": "yarn rw dev",
-    "start": "yarn rw start",
+    "start": "yarn rw dev",
     "test": "yarn rw test",
     "lint": "yarn rw lint",
     "type-check": "yarn rw type-check"
