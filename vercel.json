@@ -3,14 +3,9 @@
   "outputDirectory": "web/dist",
   "installCommand": "yarn install",
   "framework": "redwoodjs",
-  "build": {
-    "env": {
-      "NODE_VERSION": "20"
-    }
-  },
   "rewrites": [
     {
-      "source": "/((?!api).*)",
+      "source": "/(.*)",
       "destination": "/index.html"
     }
   ],
@@ -47,10 +42,6 @@
         {
           "key": "Cache-Control",
           "value": "public, max-age=31536000, immutable"
-        },
-        {
-          "key": "Content-Encoding",
-          "value": "gzip"
         }
       ]
     },
@@ -60,10 +51,6 @@
         {
           "key": "Cache-Control",
           "value": "public, max-age=31536000, immutable"
-        },
-        {
-          "key": "Content-Encoding",
-          "value": "gzip"
         }
       ]
     },
@@ -73,10 +60,6 @@
         {
           "key": "Cache-Control",
           "value": "public, max-age=31536000, immutable"
-        },
-        {
-          "key": "Content-Encoding",
-          "value": "gzip"
         }
       ]
     },
@@ -86,10 +69,6 @@
         {
           "key": "Cache-Control",
           "value": "public, max-age=31536000, immutable"
-        },
-        {
-          "key": "Content-Encoding",
-          "value": "gzip"
         }
       ]
     }
