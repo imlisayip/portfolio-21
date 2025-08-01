@@ -8,19 +8,32 @@ const urlsToCache = [
   '/images/favicon.png'
 ]
 
+// Use modern service worker APIs
 self.addEventListener('install', (event) => {
   event.waitUntil(
     caches.open(CACHE_NAME)
       .then((cache) => cache.addAll(urlsToCache))
+      .catch((error) => {
+        console.warn('Service worker cache failed:', error)
+      })
   )
 })
 
 self.addEventListener('fetch', (event) => {
+  // Only handle GET requests
+  if (event.request.method !== 'GET') {
+    return
+  }
+
   event.respondWith(
     caches.match(event.request)
       .then((response) => {
         // Return cached version or fetch from network
         return response || fetch(event.request)
+          .catch(() => {
+            // Return a fallback response if both cache and network fail
+            return new Response('Network error', { status: 503 })
+          })
       })
   )
 })
