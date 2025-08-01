@@ -22442,7 +22442,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"react-helmet-async@npm:2.0.5":
+"react-helmet-async@npm:2.0.5, react-helmet-async@npm:^2.0.5":
   version: 2.0.5
   resolution: "react-helmet-async@npm:2.0.5"
   dependencies:
@@ -23349,6 +23349,7 @@ __metadata:
     graphql-tag: "npm:^2.12.6"
     prettier: "npm:^3.6.2"
     prettier-plugin-tailwindcss: "npm:0.4.1"
+    react-helmet-async: "npm:^2.0.5"
   languageName: unknown
   linkType: soft
 

@@ -1,5 +1,4 @@
-import { FatalErrorBoundary } from '@redwoodjs/web'
-import { MetaTags } from '@redwoodjs/web'
+import { Helmet } from 'react-helmet-async'
 
 import Hero from 'src/components/Hero'
 import MediaCard from 'src/components/MediaCard'
@@ -12,11 +11,19 @@ const HomePage = () => {
 
   return (
     <main className="mt-10 sm:mb-40 md:mb-24">
-      <MetaTags
-        title={metaTags.title}
-        description={metaTags.description}
-        og={metaTags.openGraph}
-      />
+      <Helmet>
+        <title>{metaTags.title}</title>
+        <meta name="description" content={metaTags.description} />
+        <meta property="og:title" content={metaTags.openGraph.title} />
+        <meta property="og:description" content={metaTags.openGraph.description} />
+        <meta property="og:type" content="website" />
+        <meta property="og:url" content={metaTags.openGraph.url} />
+        <meta property="og:image" content={metaTags.openGraph.image} />
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:title" content={metaTags.openGraph.title} />
+        <meta name="twitter:description" content={metaTags.openGraph.description} />
+        <meta name="twitter:image" content={metaTags.openGraph.image} />
+      </Helmet>
 
       <Hero eyebrow={HEADER.eyebrow} intro={HEADER.intro} />
       {PROJECTS.map((project, index) => (

@@ -1,6 +1,7 @@
 import { FatalErrorBoundary, RedwoodProvider } from '@redwoodjs/web'
 import { RedwoodApolloProvider } from '@redwoodjs/web/apollo'
 import React, { useEffect, useState } from 'react'
+import { HelmetProvider } from 'react-helmet-async'
 
 import FatalErrorPage from 'src/pages/FatalErrorPage'
 import Routes from 'src/Routes'
@@ -91,14 +92,16 @@ class ErrorBoundary extends React.Component<
 }
 
 const App = () => (
-  <FatalErrorBoundary page={FatalErrorPage}>
-    <RedwoodProvider titleTemplate="%PageTitle | %AppTitle">
-      <RedwoodApolloProvider>
-        <Routes />
-        <SafeSpeedInsights />
-      </RedwoodApolloProvider>
-    </RedwoodProvider>
-  </FatalErrorBoundary>
+  <HelmetProvider>
+    <FatalErrorBoundary page={FatalErrorPage}>
+      <RedwoodProvider titleTemplate="%PageTitle | %AppTitle">
+        <RedwoodApolloProvider>
+          <Routes />
+          <SafeSpeedInsights />
+        </RedwoodApolloProvider>
+      </RedwoodProvider>
+    </FatalErrorBoundary>
+  </HelmetProvider>
 )
 
 export default App
