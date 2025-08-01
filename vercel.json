@@ -9,11 +9,6 @@
       "destination": "/index.html"
     }
   ],
-  "functions": {
-    "api/src/functions/*.ts": {
-      "maxDuration": 30
-    }
-  },
   "headers": [
     {
       "source": "/:path*",
