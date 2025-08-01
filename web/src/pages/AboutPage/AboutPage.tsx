@@ -1,9 +1,10 @@
-import { Metadata } from '@redwoodjs/web'
+import { FatalErrorBoundary } from '@redwoodjs/web'
+import { MetaTags } from '@redwoodjs/web'
 
-import AboutBioCard from 'src/components/AboutBioCard/AboutBioCard'
+import AboutBioCard from 'src/components/AboutBioCard'
 import { generatePageMetaTags } from 'src/lib/seo'
 
-import { PROFILE } from '../../../public/files/data'
+import { PROFILE } from 'src/lib/data'
 
 const AboutPage = () => {
   const metaTags = generatePageMetaTags(
@@ -13,7 +14,7 @@ const AboutPage = () => {
 
   return (
     <main className="my-10 sm:mb-40 md:mb-24">
-      <Metadata
+      <MetaTags
         title={metaTags.title}
         description={metaTags.description}
         og={metaTags.openGraph}

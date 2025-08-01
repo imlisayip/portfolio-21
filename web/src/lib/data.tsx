@@ -1,14 +1,15 @@
-import COE from '../images/optimized/creativity-over-everything.png'
-import Transparency from '../images/optimized/dropbox-transparency.png'
-import HeatmapsExplore from '../images/optimized/fullstory-heatmaps.png'
-import JourneyMaps from '../images/optimized/fullstory-journey-maps.png'
-import Product from '../images/optimized/patreon-product.png'
-import SalesforceDreamforce from '../images/optimized/salesforce-dreamforce.png'
-import LisaYip from '../images/optimized/sf-trolley.png'
-import WorkInProgress from '../images/optimized/work-in-progress.png'
-import YIR from '../images/optimized/YIR.png'
+// Import images using the correct Vite syntax for static assetsp
+const COE = '/images/optimized/creativity-over-everything.png'
+const Transparency = '/images/optimized/dropbox-transparency.png'
+const HeatmapsExplore = '/images/optimized/fullstory-heatmaps.png'
+const JourneyMaps = '/images/optimized/fullstory-journey-maps.png'
+const Product = '/images/optimized/patreon-product.png'
+const SalesforceDreamforce = '/images/optimized/salesforce-dreamforce.png'
+const LisaYip = '/images/optimized/sf-trolley.png'
+const WorkInProgress = '/images/optimized/work-in-progress.png'
+const YIR = '/images/optimized/YIR.png'
 
-import RESUMEPATH from './YIP_Resume_25.pdf'
+const RESUMEPATH = '/files/YIP_Resume_25.pdf'
 
 // Contact information from constants
 const CONTACT_INFO = {

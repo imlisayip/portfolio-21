@@ -7,7 +7,7 @@ import Footer from 'src/components/Footer/Footer'
 import Nav from 'src/components/Nav/Nav'
 import StructuredData from 'src/components/StructuredData/StructuredData'
 
-import { LINKEDIN, GITHUB, RESUME } from '../../../public/files/data'
+import { LINKEDIN, GITHUB, RESUME } from 'src/lib/data'
 
 type PortfolioLayoutProps = {
   children?: React.ReactNode

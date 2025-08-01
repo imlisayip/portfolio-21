@@ -1,17 +1,18 @@
-import { Metadata } from '@redwoodjs/web'
+import { FatalErrorBoundary } from '@redwoodjs/web'
+import { MetaTags } from '@redwoodjs/web'
 
-import Hero from 'src/components/Hero/Hero'
-import MediaCard from 'src/components/MediaCard/MediaCard'
+import Hero from 'src/components/Hero'
+import MediaCard from 'src/components/MediaCard'
 import { generateMetaTags } from 'src/lib/seo'
 
-import { HEADER, PROJECTS } from '../../../public/files/data'
+import { HEADER, PROJECTS } from 'src/lib/data'
 
 const HomePage = () => {
   const metaTags = generateMetaTags()
 
   return (
     <main className="mt-10 sm:mb-40 md:mb-24">
-      <Metadata
+      <MetaTags
         title={metaTags.title}
         description={metaTags.description}
         og={metaTags.openGraph}
