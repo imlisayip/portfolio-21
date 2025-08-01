@@ -52,6 +52,28 @@
   <link rel="prefetch" href="/about" />
 
   <link rel="icon" type="image/png" href="/favicon.png" />
+
+  <!-- Script to handle blocked Vercel scripts gracefully -->
+  <script>
+    // Suppress console errors for blocked Vercel scripts
+    const originalError = console.error;
+    console.error = function(...args) {
+      const message = args.join(' ');
+      if (message.includes('vercel') || message.includes('ERR_BLOCKED_BY_CLIENT')) {
+        // Silently ignore Vercel-related errors
+        return;
+      }
+      originalError.apply(console, args);
+    };
+
+    // Also handle network errors for Vercel scripts
+    window.addEventListener('error', function(e) {
+      if (e.target && e.target.src && e.target.src.includes('vercel')) {
+        e.preventDefault();
+        return false;
+      }
+    }, true);
+  </script>
 </head>
 
 <body>
