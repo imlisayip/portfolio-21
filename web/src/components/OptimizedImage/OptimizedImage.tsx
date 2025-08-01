@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useState, useEffect } from 'react'
 
 interface OptimizedImageProps {
   src: string
@@ -10,6 +10,7 @@ interface OptimizedImageProps {
   width?: number
   height?: number
   aspectRatio?: string
+  priority?: boolean
 }
 
 const OptimizedImage: React.FC<OptimizedImageProps> = ({
@@ -21,17 +22,47 @@ const OptimizedImage: React.FC<OptimizedImageProps> = ({
   onError,
   width,
   height,
-  aspectRatio
+  aspectRatio,
+  priority = false
 }) => {
+  const [imageLoaded, setImageLoaded] = useState(false)
+  const [imageError, setImageError] = useState(false)
+
   // Convert PNG path to WebP path
   const webpSrc = src.replace(/\.png$/, '.webp')
 
   // Calculate aspect ratio if not provided
   const style = aspectRatio ? { aspectRatio } : {}
 
+  // Preload critical images
+  useEffect(() => {
+    if (priority) {
+      const link = document.createElement('link')
+      link.rel = 'preload'
+      link.as = 'image'
+      link.href = webpSrc
+      document.head.appendChild(link)
+
+      return () => {
+        document.head.removeChild(link)
+      }
+    }
+  }, [priority, webpSrc])
+
+  const handleLoad = () => {
+    setImageLoaded(true)
+  }
+
+  const handleError = (e: React.SyntheticEvent<HTMLImageElement, Event>) => {
+    setImageError(true)
+    if (onError) {
+      onError(e)
+    }
+  }
+
   return (
     <div
-      className={`relative overflow-hidden ${className}`}
+      className={`relative overflow-hidden ${className} ${imageLoaded ? 'image-loaded' : ''}`}
       style={style}
     >
       <picture>
@@ -44,16 +75,27 @@ const OptimizedImage: React.FC<OptimizedImageProps> = ({
           alt={alt}
           width={width}
           height={height}
-          loading={loading}
+          loading={priority ? 'eager' : loading}
           decoding={decoding}
-          onError={onError}
-          className="w-full h-full object-cover"
+          onLoad={handleLoad}
+          onError={handleError}
+          className={`w-full h-full object-cover transition-opacity duration-300 ${
+            imageLoaded ? 'opacity-100' : 'opacity-0'
+          } ${imageError ? 'hidden' : ''}`}
           style={{
             aspectRatio: aspectRatio || 'auto',
             minHeight: height ? `${height}px` : 'auto'
           }}
         />
       </picture>
+
+      {/* Loading placeholder */}
+      {!imageLoaded && !imageError && (
+        <div
+          className="absolute inset-0 bg-gray-200 animate-pulse"
+          style={{ aspectRatio: aspectRatio || 'auto' }}
+        />
+      )}
     </div>
   )
 }

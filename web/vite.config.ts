@@ -12,8 +12,8 @@ dns.setDefaultResultOrder('verbatim')
 const viteConfig: UserConfig = {
   plugins: [redwood()],
   build: {
-    // Enable source maps for production builds
-    sourcemap: true,
+    // Enable source maps for development, disable for production
+    sourcemap: process.env.NODE_ENV === 'development',
     // Enable minification
     minify: 'terser',
     terserOptions: {
@@ -25,17 +25,35 @@ const viteConfig: UserConfig = {
     rollupOptions: {
       output: {
         manualChunks: {
-          vendor: ['react', 'react-dom'],
-          router: ['@redwoodjs/router'],
-          analytics: ['@vercel/analytics']
+          // Core React libraries
+          'react-core': ['react', 'react-dom'],
+          // Router
+          'router': ['@redwoodjs/router'],
+          // Analytics (loaded separately)
+          'analytics': ['@vercel/analytics', '@vercel/speed-insights'],
+          // RedwoodJS core
+          'redwood-core': ['@redwoodjs/web'],
+          // Vendor libraries
+          'vendor': ['prop-types'],
         },
         // Optimize chunk naming for better caching
         chunkFileNames: 'assets/[name]-[hash].js',
         entryFileNames: 'assets/[name]-[hash].js',
-        assetFileNames: 'assets/[name]-[hash].[ext]'
-      }
+        assetFileNames: (assetInfo) => {
+          const info = assetInfo.name?.split('.') || []
+          const ext = info[info.length - 1]
+          if (/png|jpe?g|svg|gif|tiff|bmp|ico/i.test(ext)) {
+            return `assets/images/[name]-[hash].[ext]`
+          }
+          if (/css/i.test(ext)) {
+            return `assets/css/[name]-[hash].[ext]`
+          }
+          return `assets/[name]-[hash].[ext]`
+        }
+      },
     },
-    chunkSizeWarningLimit: 1000,
+    // Increase chunk size warning limit
+    chunkSizeWarningLimit: 2000,
     // Enable CSS code splitting
     cssCodeSplit: true,
     // Optimize dependencies
@@ -44,9 +62,17 @@ const viteConfig: UserConfig = {
     },
   },
   optimizeDeps: {
-    include: ['react', 'react-dom', '@redwoodjs/router'],
+    include: [
+      'react',
+      'react-dom',
+      '@redwoodjs/router',
+      '@redwoodjs/web',
+      'prop-types'
+    ],
     // Force pre-bundling of dependencies
-    force: true
+    force: true,
+    // Exclude problematic dependencies
+    exclude: ['@vercel/analytics', '@vercel/speed-insights']
   },
   server: {
     headers: {

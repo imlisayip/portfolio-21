@@ -10,7 +10,7 @@ import setupConsoleErrorHandler from 'src/lib/consoleErrorHandler'
 import './index.css'
 import './hamburgers.css'
 
-// Component to safely load SpeedInsights
+// Component to safely load SpeedInsights with better performance
 const SafeSpeedInsights = () => {
   const [shouldLoad, setShouldLoad] = useState(false)
   const [hasError, setHasError] = useState(false)
@@ -27,10 +27,17 @@ const SafeSpeedInsights = () => {
          window.navigator.userAgent.includes('uBlock'));
 
       if (!hasAdBlocker) {
-        // Small delay to ensure the page is fully loaded
+        // Increased delay to ensure page is fully loaded and stable
         const timer = setTimeout(() => {
-          setShouldLoad(true)
-        }, 2000) // Increased delay to ensure page is stable
+          // Only load if page is idle
+          if (document.readyState === 'complete') {
+            setShouldLoad(true)
+          } else {
+            window.addEventListener('load', () => {
+              setTimeout(() => setShouldLoad(true), 1000)
+            })
+          }
+        }, 3000) // Increased delay for better performance
 
         return () => clearTimeout(timer)
       }
@@ -42,10 +49,12 @@ const SafeSpeedInsights = () => {
     return null
   }
 
-  // Dynamically import SpeedInsights only when needed
+  // Dynamically import SpeedInsights only when needed with better error handling
   const SpeedInsightsComponent = React.lazy(() =>
     import('@vercel/speed-insights/react').then(module => ({
       default: module.SpeedInsights
+    })).catch(() => ({
+      default: () => null // Fallback component
     }))
   );
 
