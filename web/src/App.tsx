@@ -10,12 +10,28 @@ import setupConsoleErrorHandler from 'src/lib/consoleErrorHandler'
 import './index.css'
 import './hamburgers.css'
 
+// Dynamically import SpeedInsights outside of component to prevent hook issues
+const SpeedInsightsComponent = React.lazy(() =>
+  import('@vercel/speed-insights/react').then(module => ({
+    default: module.SpeedInsights
+  })).catch(() => ({
+    default: () => null // Fallback component
+  }))
+);
+
 // Component to safely load SpeedInsights with better performance
 const SafeSpeedInsights = () => {
   const [shouldLoad, setShouldLoad] = useState(false)
   const [hasError, setHasError] = useState(false)
+  const [isMounted, setIsMounted] = useState(false)
 
   useEffect(() => {
+    setIsMounted(true)
+  }, [])
+
+  useEffect(() => {
+    if (!isMounted) return
+
     // Setup console error handler
     setupConsoleErrorHandler()
 
@@ -42,21 +58,17 @@ const SafeSpeedInsights = () => {
         return () => clearTimeout(timer)
       }
     }
-  }, [])
+  }, [isMounted])
+
+  // Don't render anything until mounted to prevent hydration issues
+  if (!isMounted) {
+    return null
+  }
 
   // Don't render if there was an error or we shouldn't load
   if (hasError || !shouldLoad) {
     return null
   }
-
-  // Dynamically import SpeedInsights only when needed with better error handling
-  const SpeedInsightsComponent = React.lazy(() =>
-    import('@vercel/speed-insights/react').then(module => ({
-      default: module.SpeedInsights
-    })).catch(() => ({
-      default: () => null // Fallback component
-    }))
-  );
 
   return (
     <ErrorBoundary onError={() => setHasError(true)}>

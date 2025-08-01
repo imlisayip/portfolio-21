@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react'
+import React, { useState, useEffect, useRef } from 'react'
 
 interface OptimizedImageProps {
   src: string
@@ -27,6 +27,8 @@ const OptimizedImage: React.FC<OptimizedImageProps> = ({
 }) => {
   const [imageLoaded, setImageLoaded] = useState(false)
   const [imageError, setImageError] = useState(false)
+  const [isMounted, setIsMounted] = useState(false)
+  const imageRef = useRef<HTMLImageElement>(null)
 
   // Convert PNG path to WebP path
   const webpSrc = src.replace(/\.png$/, '.webp')
@@ -34,9 +36,14 @@ const OptimizedImage: React.FC<OptimizedImageProps> = ({
   // Calculate aspect ratio if not provided
   const style = aspectRatio ? { aspectRatio } : {}
 
+  // Track if component has mounted to prevent hydration mismatch
+  useEffect(() => {
+    setIsMounted(true)
+  }, [])
+
   // Preload critical images
   useEffect(() => {
-    if (priority) {
+    if (priority && isMounted) {
       const link = document.createElement('link')
       link.rel = 'preload'
       link.as = 'image'
@@ -44,10 +51,12 @@ const OptimizedImage: React.FC<OptimizedImageProps> = ({
       document.head.appendChild(link)
 
       return () => {
-        document.head.removeChild(link)
+        if (document.head.contains(link)) {
+          document.head.removeChild(link)
+        }
       }
     }
-  }, [priority, webpSrc])
+  }, [priority, webpSrc, isMounted])
 
   const handleLoad = () => {
     setImageLoaded(true)
@@ -62,7 +71,7 @@ const OptimizedImage: React.FC<OptimizedImageProps> = ({
 
   return (
     <div
-      className={`relative overflow-hidden ${className} ${imageLoaded ? 'image-loaded' : ''}`}
+      className={`relative overflow-hidden ${className} ${isMounted && imageLoaded ? 'image-loaded' : ''}`}
       style={style}
     >
       <picture>
@@ -71,17 +80,18 @@ const OptimizedImage: React.FC<OptimizedImageProps> = ({
 
         {/* PNG fallback for older browsers */}
         <img
+          ref={imageRef}
           src={src}
           alt={alt}
           width={width}
           height={height}
           loading={priority ? 'eager' : loading}
           decoding={decoding}
-          onLoad={handleLoad}
-          onError={handleError}
+          onLoad={isMounted ? handleLoad : undefined}
+          onError={isMounted ? handleError : undefined}
           className={`w-full h-full object-cover transition-opacity duration-300 ${
-            imageLoaded ? 'opacity-100' : 'opacity-0'
-          } ${imageError ? 'hidden' : ''}`}
+            isMounted && imageLoaded ? 'opacity-100' : 'opacity-0'
+          } ${isMounted && imageError ? 'hidden' : ''}`}
           style={{
             aspectRatio: aspectRatio || 'auto',
             minHeight: height ? `${height}px` : 'auto'
@@ -90,7 +100,7 @@ const OptimizedImage: React.FC<OptimizedImageProps> = ({
       </picture>
 
       {/* Loading placeholder */}
-      {!imageLoaded && !imageError && (
+      {(!isMounted || (!imageLoaded && !imageError)) && (
         <div
           className="absolute inset-0 bg-gray-200 animate-pulse"
           style={{ aspectRatio: aspectRatio || 'auto' }}

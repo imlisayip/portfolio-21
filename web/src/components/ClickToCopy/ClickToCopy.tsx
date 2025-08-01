@@ -1,4 +1,4 @@
-import { useState } from 'react'
+import { useState, useEffect } from 'react'
 
 interface ClickToCopyProps {
   text: string
@@ -8,6 +8,11 @@ interface ClickToCopyProps {
 
 const ClickToCopy = ({ text, className = '', onCopy }: ClickToCopyProps) => {
   const [isCopied, setIsCopied] = useState(false)
+  const [isMounted, setIsMounted] = useState(false)
+
+  useEffect(() => {
+    setIsMounted(true)
+  }, [])
 
   const handleCopy = async () => {
     try {
@@ -51,7 +56,7 @@ const ClickToCopy = ({ text, className = '', onCopy }: ClickToCopyProps) => {
       role="button"
       aria-label={`Copy ${text} to clipboard`}
     >
-      {isCopied && (
+      {isMounted && isCopied && (
         <div
           className="absolute bottom-6 right-0 text-center text-sm bg-green-100 text-green-800 px-2 py-1 rounded shadow-sm"
           role="status"

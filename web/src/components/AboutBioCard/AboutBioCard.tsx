@@ -20,7 +20,7 @@ const AboutBioCard = React.memo(({
   return (
     <article className={`flex flex-col justify-center sm:flex-row `} aria-labelledby="about-heading">
       <div
-        className={`max-w-xl pb-6  sm:mr-4 sm:mt-10 sm:w-5/12 md:mt-12 md:w-4/12 lg:mr-8 lg:mt-20 lg:w-4/12`}
+        className={`max-w-xl pb-6 sm:mr-4 sm:mt-10 sm:w-5/12 md:mt-12 md:w-4/12 lg:mr-8 lg:mt-20 lg:w-4/12`}
       >
         <OptimizedImage
           src={image}

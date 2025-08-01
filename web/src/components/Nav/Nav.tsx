@@ -1,15 +1,25 @@
-import { useEffect } from 'react'
+import { useEffect, useState } from 'react'
 
 import { Link } from '@redwoodjs/router'
 
 const Nav = ({ isOpen, toggleHamburger }) => {
+  const [isMounted, setIsMounted] = useState(false)
+
   useEffect(() => {
+    setIsMounted(true)
+  }, [])
+
+  useEffect(() => {
+    if (!isMounted) return
+
     if (isOpen && typeof window !== 'undefined') {
       const originalStyle = window.getComputedStyle(document.body).overflow
       document.body.style.overflow = 'hidden'
-      return () => (document.body.style.overflow = originalStyle)
+      return () => {
+        document.body.style.overflow = originalStyle
+      }
     }
-  }, [isOpen])
+  }, [isOpen, isMounted])
 
   return (
     <>

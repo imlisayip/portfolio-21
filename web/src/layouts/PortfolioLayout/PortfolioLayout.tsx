@@ -13,12 +13,19 @@ type PortfolioLayoutProps = {
 
 const PortfolioLayout = ({ children }: PortfolioLayoutProps) => {
   const [isOpen, setIsOpen] = useState(false)
+  const [isMounted, setIsMounted] = useState(false)
 
   const toggleHamburger = () => {
     setIsOpen((prevState) => !prevState)
   }
 
   useEffect(() => {
+    setIsMounted(true)
+  }, [])
+
+  useEffect(() => {
+    if (!isMounted) return
+
     const hideMenu = () => {
       if (window.innerWidth > 640 && isOpen) {
         setIsOpen(false)
@@ -28,10 +35,12 @@ const PortfolioLayout = ({ children }: PortfolioLayoutProps) => {
     return () => {
       window.removeEventListener('resize', hideMenu)
     }
-  }, [isOpen])
+  }, [isOpen, isMounted])
 
   // Performance monitoring
   useEffect(() => {
+    if (!isMounted) return
+
     if (typeof window !== 'undefined' && 'performance' in window) {
       const observer = new PerformanceObserver((list) => {
         for (const entry of list.getEntries()) {
@@ -44,7 +53,7 @@ const PortfolioLayout = ({ children }: PortfolioLayoutProps) => {
       observer.observe({ entryTypes: ['navigation'] });
       return () => observer.disconnect();
     }
-  }, []);
+  }, [isMounted]);
 
   return (
     <>
