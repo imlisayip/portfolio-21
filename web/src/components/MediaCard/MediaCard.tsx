@@ -42,7 +42,7 @@ const MediaCard = React.memo(({
             className="w-full"
             loading="lazy"
             decoding="async"
-            aspectRatio="16/9"
+            aspectRatio="16/11"
             onError={(e) => {
               const target = e.target as HTMLImageElement;
               target.style.display = 'none';
