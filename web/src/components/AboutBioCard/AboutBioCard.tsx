@@ -47,7 +47,7 @@ const AboutBioCard = React.memo(({
         <section className="py-6 sm:py-3.5" aria-labelledby="recognition-heading">
           <TextStyler caret id="recognition-heading">Recognition</TextStyler>
         </section>
-        <ul className="space-y-2" role="list" aria-labelledby="recognition-heading">
+        <ul className="space-y-2 font-body text-base" role="list" aria-labelledby="recognition-heading">
           {accomplishments.map((section, index) => {
               return (
               <li key={index} className="leading-7">
