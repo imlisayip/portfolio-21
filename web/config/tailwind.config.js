@@ -1,6 +1,8 @@
 /** @type {import('tailwindcss').Config} */
 module.exports = {
   content: ['src/**/*.{js,jsx,ts,tsx}'],
+  // Enable JIT mode for better performance
+  mode: 'jit',
   theme: {
     fontSize: {
       sm: [
@@ -93,4 +95,16 @@ module.exports = {
     },
   },
   plugins: [],
+  // Optimize for production
+  future: {
+    hoverOnlyWhenSupported: true,
+  },
+  // Remove unused styles in production
+  purge: {
+    enabled: process.env.NODE_ENV === 'production',
+    content: ['src/**/*.{js,jsx,ts,tsx}'],
+    options: {
+      safelist: [],
+    },
+  },
 }

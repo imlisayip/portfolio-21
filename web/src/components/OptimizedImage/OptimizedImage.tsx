@@ -7,6 +7,9 @@ interface OptimizedImageProps {
   loading?: 'lazy' | 'eager'
   decoding?: 'async' | 'sync' | 'auto'
   onError?: (e: React.SyntheticEvent<HTMLImageElement, Event>) => void
+  width?: number
+  height?: number
+  aspectRatio?: string
 }
 
 const OptimizedImage: React.FC<OptimizedImageProps> = ({
@@ -15,26 +18,43 @@ const OptimizedImage: React.FC<OptimizedImageProps> = ({
   className = '',
   loading = 'lazy',
   decoding = 'async',
-  onError
+  onError,
+  width,
+  height,
+  aspectRatio
 }) => {
   // Convert PNG path to WebP path
   const webpSrc = src.replace(/\.png$/, '.webp')
 
-  return (
-    <picture>
-      {/* WebP version for modern browsers */}
-      <source srcSet={webpSrc} type="image/webp" />
+  // Calculate aspect ratio if not provided
+  const style = aspectRatio ? { aspectRatio } : {}
 
-      {/* PNG fallback for older browsers */}
-      <img
-        src={src}
-        alt={alt}
-        className={className}
-        loading={loading}
-        decoding={decoding}
-        onError={onError}
-      />
-    </picture>
+  return (
+    <div
+      className={`relative overflow-hidden ${className}`}
+      style={style}
+    >
+      <picture>
+        {/* WebP version for modern browsers */}
+        <source srcSet={webpSrc} type="image/webp" />
+
+        {/* PNG fallback for older browsers */}
+        <img
+          src={src}
+          alt={alt}
+          width={width}
+          height={height}
+          loading={loading}
+          decoding={decoding}
+          onError={onError}
+          className="w-full h-full object-cover"
+          style={{
+            aspectRatio: aspectRatio || 'auto',
+            minHeight: height ? `${height}px` : 'auto'
+          }}
+        />
+      </picture>
+    </div>
   )
 }
 

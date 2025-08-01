@@ -24,12 +24,12 @@ const MediaCard = React.memo(({
 }: MediaCardProps) => {
   return (
     <article
-      className={`my-16 flex flex-col justify-center   ${
+      className={`my-16 flex flex-col justify-center ${
         direction === 'left' ? 'md:flex-row' : 'md:flex-row-reverse'
       }`}
       aria-labelledby={`project-heading`}
     >
-      <div className={`max-w-4xl pb-6 md:w-6/12  lg:w-8/12`}>
+      <div className={`max-w-4xl pb-6 md:w-6/12 lg:w-8/12`}>
         <a
           href={ctaLink}
           aria-label={`View ${heading} project`}
@@ -39,9 +39,10 @@ const MediaCard = React.memo(({
           <OptimizedImage
             src={image}
             alt={alt}
-            className="w-full h-auto"
+            className="w-full"
             loading="lazy"
             decoding="async"
+            aspectRatio="16/9"
             onError={(e) => {
               const target = e.target as HTMLImageElement;
               target.style.display = 'none';
