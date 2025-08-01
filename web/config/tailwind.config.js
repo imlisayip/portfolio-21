@@ -1,8 +1,6 @@
 /** @type {import('tailwindcss').Config} */
 module.exports = {
   content: ['src/**/*.{js,jsx,ts,tsx}'],
-  // Enable JIT mode for better performance
-  mode: 'jit',
   theme: {
     fontSize: {
       sm: [
@@ -87,24 +85,12 @@ module.exports = {
         heading: '#222222',
         black: '#212121',
       },
-    },
-    fontFamily: {
-      body: ['gt-america-light', 'sans-serif'],
-      highlight: ['gt-america-medium', 'sans-serif'],
-      heading: ['canela-thin-web', 'serif'],
+      fontFamily: {
+        body: ['gt-america-light', 'sans-serif'],
+        highlight: ['gt-america-medium', 'sans-serif'],
+        heading: ['canela-thin-web', 'serif'],
+      },
     },
   },
   plugins: [],
-  // Optimize for production
-  future: {
-    hoverOnlyWhenSupported: true,
-  },
-  // Remove unused styles in production
-  purge: {
-    enabled: process.env.NODE_ENV === 'production',
-    content: ['src/**/*.{js,jsx,ts,tsx}'],
-    options: {
-      safelist: [],
-    },
-  },
 }
