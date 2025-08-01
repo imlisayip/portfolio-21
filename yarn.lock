@@ -21788,7 +21788,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"postcss@npm:^8.4.23, postcss@npm:^8.4.33, postcss@npm:^8.4.35":
+"postcss@npm:^8.4.23, postcss@npm:^8.4.33":
   version: 8.4.35
   resolution: "postcss@npm:8.4.35"
   dependencies:
@@ -21799,7 +21799,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"postcss@npm:^8.4.43":
+"postcss@npm:^8.4.38, postcss@npm:^8.4.43":
   version: 8.5.6
   resolution: "postcss@npm:8.5.6"
   dependencies:
@@ -23343,12 +23343,12 @@ __metadata:
     "@redwoodjs/cli-storybook": "npm:^7.7.5"
     "@redwoodjs/core": "npm:^8.8.0"
     "@testing-library/jest-dom": "npm:^6.6.4"
-    "@vercel/analytics": "npm:^1.2.0"
     babel-plugin-graphql-tag: "npm:^3.3.0"
     graphql: "npm:^16.11.0"
     graphql-tag: "npm:^2.12.6"
     prettier: "npm:^3.6.2"
     prettier-plugin-tailwindcss: "npm:0.4.1"
+    react: "npm:18.3.1"
     react-helmet-async: "npm:^2.0.5"
   languageName: unknown
   linkType: soft
@@ -26255,10 +26255,11 @@ __metadata:
     "@testing-library/jest-dom": "npm:^6.6.4"
     "@types/react": "npm:18.3.1"
     "@types/react-dom": "npm:18.3.1"
+    "@vercel/analytics": "npm:^1.2.0"
     "@vercel/speed-insights": "npm:^1.2.0"
     autoprefixer: "npm:^10.4.21"
     cssnano: "npm:^7.1.0"
-    postcss: "npm:^8.4.35"
+    postcss: "npm:^8.4.38"
     postcss-loader: "npm:^8.1.0"
     prop-types: "npm:15.8.1"
     react: "npm:18.3.1"
