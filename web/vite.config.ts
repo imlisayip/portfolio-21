@@ -77,6 +77,12 @@ const viteConfig: UserConfig = {
   server: {
     headers: {
       'Cache-Control': 'public, max-age=31536000, immutable'
+    },
+    proxy: {
+      '/.redwood/functions': {
+        target: 'http://localhost:8911',
+        changeOrigin: true
+      }
     }
   },
   // Enable CSS optimization only in production
