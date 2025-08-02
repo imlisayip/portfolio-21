@@ -63,6 +63,16 @@ self.addEventListener('fetch', (event) => {
     return;
   }
 
+  // Skip Vercel analytics and external resources
+  if (url.hostname.includes('vercel') || url.hostname.includes('googleapis') || url.hostname.includes('gstatic')) {
+    return;
+  }
+
+  // Skip critical assets that should load directly
+  if (url.pathname.includes('/assets/') && (url.pathname.includes('.js') || url.pathname.includes('.css'))) {
+    return;
+  }
+
   // Handle different types of requests
   if (request.destination === 'image') {
     event.respondWith(handleImageRequest(request));
@@ -119,17 +129,23 @@ async function handleFontRequest(request) {
 
 // Handle asset requests with stale-while-revalidate strategy
 async function handleAssetRequest(request) {
-  const cache = await caches.open(DYNAMIC_CACHE);
-  const cachedResponse = await cache.match(request);
+  try {
+    const cache = await caches.open(DYNAMIC_CACHE);
+    const cachedResponse = await cache.match(request);
 
-  const fetchPromise = fetch(request).then((networkResponse) => {
-    if (networkResponse.ok) {
-      cache.put(request, networkResponse.clone());
-    }
-    return networkResponse;
-  });
+    const fetchPromise = fetch(request).then((networkResponse) => {
+      if (networkResponse.ok) {
+        cache.put(request, networkResponse.clone());
+      }
+      return networkResponse;
+    });
 
-  return cachedResponse || fetchPromise;
+    return cachedResponse || fetchPromise;
+  } catch (error) {
+    console.log('Asset fetch failed:', error);
+    // Fallback to network request without caching
+    return fetch(request);
+  }
 }
 
 // Handle page requests with network-first strategy
