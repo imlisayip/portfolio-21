@@ -58,7 +58,7 @@ const MediaCard = React.memo(({
         <h2 id={`project-heading`} className="pb-6 text-lgm md:text-lgt lg:text-lgd">{heading}</h2>
         <div
           dangerouslySetInnerHTML={{ __html: body }}
-          className="pb-6 sm:pb-3.5"
+          className="pb-6 sm:pb-3.5 font-body"
           aria-describedby={`project-heading`}
         />
         <TextStyler link={ctaLink} caret highlight>

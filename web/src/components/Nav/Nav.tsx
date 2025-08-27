@@ -63,7 +63,7 @@ const Nav = ({ isOpen, toggleHamburger }) => {
       </nav>
       {isOpen && (
         <div
-          className="absolute -ml-[1.25rem] max-h-screen w-full"
+          className="bg-cream absolute -ml-[1.25rem] max-h-screen w-full z-50"
           id="mobile-menu"
           aria-label="Mobile navigation menu"
         >
