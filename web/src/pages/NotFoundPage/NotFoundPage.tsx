@@ -1,44 +1,25 @@
-export default () => (
-  <main>
-    <style
-      dangerouslySetInnerHTML={{
-        __html: `
-              html, body {
-                margin: 0;
-              }
-              html * {
-                box-sizing: border-box;
-              }
-              main {
-                display: flex;
-                align-items: center;
-                font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif;
-                text-align: center;
-                background-color: #E2E8F0;
-                height: 100vh;
-              }
-              section {
-                background-color: white;
-                border-radius: 0.25rem;
-                width: 32rem;
-                padding: 1rem;
-                margin: 0 auto;
-                box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px 0 rgba(0, 0, 0, 0.06);
-              }
-              h1 {
-                font-size: 2rem;
-                margin: 0;
-                font-weight: 500;
-                line-height: 1;
-                color: #2D3748;
-              }
-            `,
-      }}
-    />
-    <section>
-      <h1>
-        <span>404 Page Not Found</span>
-      </h1>
-    </section>
-  </main>
-)
+import { Link } from '@redwoodjs/router'
+import React from 'react'
+
+const NotFoundPage = () => {
+  return (
+    <main className="flex items-center justify-center min-h-screen bg-gray-100 font-sans text-center">
+      <section className="bg-white rounded-lg shadow-md p-8 max-w-md mx-4">
+        <h1 className="text-3xl font-medium text-gray-800 mb-4">
+          404 Page Not Found
+        </h1>
+        <p className="text-gray-600 mb-6">
+          Sorry, the page you're looking for doesn't exist.
+        </p>
+        <Link
+          to="/"
+          className="bg-blue-500 hover:bg-blue-600 text-white font-medium py-2 px-4 rounded-md transition-colors duration-200 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2"
+        >
+          Back to Home
+        </Link>
+      </section>
+    </main>
+  )
+}
+
+export default NotFoundPage
