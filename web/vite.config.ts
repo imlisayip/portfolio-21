@@ -32,7 +32,25 @@ const viteConfig: UserConfig = {
     headers: {
       'Cache-Control': 'public, max-age=31536000, immutable'
     }
-  }
+  },
+    // Enable CSS optimization only in production
+  ...(process.env.NODE_ENV === 'production' && {
+    css: {
+      postcss: {
+        plugins: [
+          require('autoprefixer'),
+          require('cssnano')({
+            preset: ['default', {
+              discardComments: {
+                removeAll: true,
+              },
+              normalizeWhitespace: true,
+            }]
+          })
+        ]
+      }
+    }
+  })
 }
 
 export default defineConfig(viteConfig)

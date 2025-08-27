@@ -21,8 +21,7 @@
 }
 @font-face {
   font-family: 'gt-america-light';
-  font-display: fallback;
-  src: url('/fonts/gt-america-light.woff') format('wo`');
+  src: url('/fonts/gt-america-light.woff') format('woff');
   font-weight: normal;
   font-style: normal;
 }

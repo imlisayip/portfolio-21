@@ -85,11 +85,11 @@ module.exports = {
         heading: '#222222',
         black: '#212121',
       },
-    },
-    fontFamily: {
-      body: ['gt-america-light', 'sans-serif'],
-      highlight: ['gt-america-medium', 'sans-serif'],
-      heading: ['canela-thin-web', 'serif'],
+      fontFamily: {
+        body: ['gt-america-light', 'sans-serif'],
+        highlight: ['gt-america-medium', 'sans-serif'],
+        heading: ['canela-thin-web', 'serif'],
+      },
     },
   },
   plugins: [],
