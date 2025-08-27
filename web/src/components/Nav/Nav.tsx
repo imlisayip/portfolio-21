@@ -63,12 +63,12 @@ const Nav = ({ isOpen, toggleHamburger }) => {
       </nav>
       {isOpen && (
         <div
-          className="bg-cream absolute -ml-[1.25rem] max-h-screen w-full z-50"
+          className="bg-cream absolute -ml-[1.25rem] max-h-screen w-full z-50 border-b-[24px] border-white"
           id="mobile-menu"
           aria-label="Mobile navigation menu"
         >
           <div
-            className="grid auto-rows-min grid-rows-12 items-center bg-cream text-center"
+            className="flex flex-col items-center justify-center bg-cream text-center h-[calc(100vh-9rem)]"
             onClick={toggleHamburger}
             onKeyDown={(e) => {
               if (e.key === 'Escape') {
@@ -77,13 +77,14 @@ const Nav = ({ isOpen, toggleHamburger }) => {
             }}
             tabIndex={0}
           >
-            <div className="row-span-1"></div>
-            <Link className="text-md row-span-1 py-4 font-heading" to="/">
+            <div className="flex-1"></div>
+            <Link className="text-md py-4 font-heading" to="/">
               <h3>work</h3>
             </Link>
-            <Link className="text-md row-span-1 py-4 font-heading" to="/about">
+            <Link className="text-md py-4 font-heading" to="/about">
               <h3>about</h3>
             </Link>
+            <div className="flex-1"></div>
           </div>
         </div>
       )}
