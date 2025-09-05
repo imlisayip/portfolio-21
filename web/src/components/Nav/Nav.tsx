@@ -65,7 +65,7 @@ const Nav = ({ isOpen, toggleHamburger }) => {
       </nav>
       {isOpen && (
         <div
-          className="bg-cream absolute -ml-[1.25rem] max-h-screen w-full z-50 border-b-[24px] border-white"
+          className="bg-cream absolute -ml-[1.25rem] max-h-screen w-full z-50 md:border-b-[24px] border-white"
           id="mobile-menu"
           aria-label="Mobile navigation menu"
         >
