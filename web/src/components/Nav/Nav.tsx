@@ -16,7 +16,7 @@ const Nav = ({ isOpen, toggleHamburger }) => {
   return (
     <>
       <nav
-        className="relative flex h-16 items-center justify-between sm:h-24"
+        className="relative flex h-16 items-center justify-between sm:h-24 z-50"
         role="navigation"
         aria-label="Main navigation"
       >
@@ -65,12 +65,12 @@ const Nav = ({ isOpen, toggleHamburger }) => {
       </nav>
       {isOpen && (
         <div
-          className="bg-cream absolute -ml-[1.25rem] max-h-screen w-full z-50 md:border-b-[24px] border-white"
+          className="bg-cream absolute top-0 left-0 w-full h-screen z-40"
           id="mobile-menu"
           aria-label="Mobile navigation menu"
         >
           <div
-            className="flex flex-col items-center justify-center bg-cream text-center h-[calc(100vh-9rem)]"
+            className="flex flex-col items-center justify-center bg-cream text-center h-full"
             onClick={toggleHamburger}
             onKeyDown={(e) => {
               if (e.key === 'Escape') {
