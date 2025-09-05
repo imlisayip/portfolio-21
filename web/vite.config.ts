@@ -14,23 +14,11 @@ const viteConfig: UserConfig = {
   build: {
     // Enable source maps for production builds
     sourcemap: true,
-    rollupOptions: {
-      output: {
-        manualChunks: {
-          vendor: ['react', 'react-dom'],
-          router: ['@redwoodjs/router'],
-          analytics: ['@vercel/analytics']
-        }
-      }
-    },
     chunkSizeWarningLimit: 1000
-  },
-  optimizeDeps: {
-    include: ['react', 'react-dom', '@redwoodjs/router']
   },
   server: {
     headers: {
-      'Cache-Control': 'public, max-age=31536000, immutable'
+      'Cache-Control': 'no-cache, no-store, must-revalidate'
     }
   },
     // Enable CSS optimization only in production

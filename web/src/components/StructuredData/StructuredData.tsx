@@ -1,6 +1,6 @@
 import React from 'react'
 
-import { SITE_CONFIG, PROFESSIONAL_INFO, CONTACT_INFO } from 'src/lib/constants'
+import { SITE_CONFIG, PROFESSIONAL_INFO, CONTACT_INFO } from '../../lib/constants'
 
 interface StructuredDataProps {
   type?: 'person' | 'website'

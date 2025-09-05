@@ -1,16 +1,16 @@
 import { FatalErrorBoundary, RedwoodProvider } from '@redwoodjs/web'
+import { DevFatalErrorPage } from '@redwoodjs/web/dist/components/DevFatalErrorPage'
 import { RedwoodApolloProvider } from '@redwoodjs/web/apollo'
 import { SpeedInsights } from '@vercel/speed-insights/react'
 import React from 'react'
 
-import FatalErrorPage from 'src/pages/FatalErrorPage'
-import Routes from 'src/Routes'
+import Routes from './Routes'
 
 import './index.css'
 import './hamburgers.css'
 
 const App = () => (
-  <FatalErrorBoundary page={FatalErrorPage}>
+  <FatalErrorBoundary page={DevFatalErrorPage as any}>
     <RedwoodProvider titleTemplate="%PageTitle | %AppTitle">
       <RedwoodApolloProvider>
         <Routes />

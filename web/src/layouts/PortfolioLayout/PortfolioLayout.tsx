@@ -2,12 +2,12 @@ import { useState, useEffect } from 'react'
 
 import { Analytics } from '@vercel/analytics/react'
 
-import ErrorBoundary from 'src/components/ErrorBoundary/ErrorBoundary'
-import Footer from 'src/components/Footer/Footer'
-import Nav from 'src/components/Nav/Nav'
-import StructuredData from 'src/components/StructuredData/StructuredData'
+import ErrorBoundary from '../../components/ErrorBoundary/ErrorBoundary'
+import Footer from '../../components/Footer/Footer'
+import Nav from '../../components/Nav/Nav'
+import StructuredData from '../../components/StructuredData/StructuredData'
 
-import { LINKEDIN, GITHUB, RESUME } from 'src/lib/data'
+import { LINKEDIN, GITHUB, RESUME } from '../../lib/data'
 
 type PortfolioLayoutProps = {
   children?: React.ReactNode

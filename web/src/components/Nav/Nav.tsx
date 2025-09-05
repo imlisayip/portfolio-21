@@ -7,7 +7,9 @@ const Nav = ({ isOpen, toggleHamburger }) => {
     if (isOpen && typeof window !== 'undefined') {
       const originalStyle = window.getComputedStyle(document.body).overflow
       document.body.style.overflow = 'hidden'
-      return () => (document.body.style.overflow = originalStyle)
+      return () => {
+        document.body.style.overflow = originalStyle
+      }
     }
   }, [isOpen])
 

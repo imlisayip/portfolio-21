@@ -1,11 +1,10 @@
-import { FatalErrorBoundary } from '@redwoodjs/web'
 import { MetaTags } from '@redwoodjs/web'
 
-import Hero from 'src/components/Hero'
-import MediaCard from 'src/components/MediaCard'
-import { generateMetaTags } from 'src/lib/seo'
+import Hero from '../../components/Hero/Hero'
+import MediaCard from '../../components/MediaCard/MediaCard'
+import { generateMetaTags } from '../../lib/seo'
 
-import { HEADER, PROJECTS } from 'src/lib/data'
+import { HEADER, PROJECTS } from '../../lib/data'
 
 const HomePage = () => {
   const metaTags = generateMetaTags()
@@ -15,7 +14,9 @@ const HomePage = () => {
       <MetaTags
         title={metaTags.title}
         description={metaTags.description}
-        og={metaTags.openGraph}
+        ogType={metaTags.openGraph.type}
+        ogUrl={metaTags.openGraph.url as `${'http://' | 'https://'}${string}`}
+        ogContentUrl={metaTags.openGraph.image}
       />
 
       <Hero eyebrow={HEADER.eyebrow} intro={HEADER.intro} />

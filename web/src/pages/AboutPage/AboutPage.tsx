@@ -1,10 +1,9 @@
-import { FatalErrorBoundary } from '@redwoodjs/web'
 import { MetaTags } from '@redwoodjs/web'
 
-import AboutBioCard from 'src/components/AboutBioCard'
-import { generatePageMetaTags } from 'src/lib/seo'
+import AboutBioCard from '../../components/AboutBioCard/AboutBioCard'
+import { generatePageMetaTags } from '../../lib/seo'
 
-import { PROFILE } from 'src/lib/data'
+import { PROFILE } from '../../lib/data'
 
 const AboutPage = () => {
   const metaTags = generatePageMetaTags(
@@ -17,7 +16,9 @@ const AboutPage = () => {
       <MetaTags
         title={metaTags.title}
         description={metaTags.description}
-        og={metaTags.openGraph}
+        ogType={metaTags.openGraph.type}
+        ogUrl={metaTags.openGraph.url as `${'http://' | 'https://'}${string}`}
+        ogContentUrl={metaTags.openGraph.image}
       />
 
       <AboutBioCard
