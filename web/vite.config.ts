@@ -21,24 +21,6 @@ const viteConfig: UserConfig = {
       'Cache-Control': 'no-cache, no-store, must-revalidate'
     }
   },
-    // Enable CSS optimization only in production
-  ...(process.env.NODE_ENV === 'production' && {
-    css: {
-      postcss: {
-        plugins: [
-          require('autoprefixer'),
-          require('cssnano')({
-            preset: ['default', {
-              discardComments: {
-                removeAll: true,
-              },
-              normalizeWhitespace: true,
-            }]
-          })
-        ]
-      }
-    }
-  })
 }
 
 export default defineConfig(viteConfig)
