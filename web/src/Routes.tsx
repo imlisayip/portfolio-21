@@ -15,8 +15,8 @@ const Routes = () => {
   return (
     <Router>
       <Set wrap={PortfolioLayout}>
-        <Route path="/about" page={AboutPage} name="about" />
-        <Route path="/" page={HomePage} name="home" />
+        <Route path="/about" page={AboutPage} name="about" prerender />
+        <Route path="/" page={HomePage} name="home" prerender />
         {/* <Route path="/work" page={WorkPage} name="work" /> */}
       </Set>
       <Route notfound page={NotFoundPage} />

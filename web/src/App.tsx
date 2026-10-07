@@ -1,6 +1,5 @@
 import { FatalErrorBoundary, RedwoodProvider } from '@redwoodjs/web'
 import { DevFatalErrorPage } from '@redwoodjs/web/dist/components/DevFatalErrorPage'
-import { RedwoodApolloProvider } from '@redwoodjs/web/apollo'
 import { SpeedInsights } from '@vercel/speed-insights/react'
 import React from 'react'
 
@@ -11,14 +10,12 @@ import './hamburgers.css'
 
 const App = () => (
   <FatalErrorBoundary page={DevFatalErrorPage as any}>
-    <RedwoodProvider titleTemplate="%PageTitle | %AppTitle">
-      <RedwoodApolloProvider>
-        <Routes />
-        {/* Wrap SpeedInsights in error boundary to prevent console errors */}
-        <ErrorBoundary>
-          <SpeedInsights />
-        </ErrorBoundary>
-      </RedwoodApolloProvider>
+    <RedwoodProvider titleTemplate="%PageTitle">
+      <Routes />
+      {/* Wrap SpeedInsights in error boundary to prevent console errors */}
+      <ErrorBoundary>
+        <SpeedInsights />
+      </ErrorBoundary>
     </RedwoodProvider>
   </FatalErrorBoundary>
 )

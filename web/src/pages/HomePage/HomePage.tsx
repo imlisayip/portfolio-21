@@ -1,4 +1,4 @@
-import { MetaTags } from '@redwoodjs/web'
+import { Helmet, MetaTags } from '@redwoodjs/web'
 
 import Hero from '../../components/Hero/Hero'
 import MediaCard from '../../components/MediaCard/MediaCard'
@@ -17,7 +17,12 @@ const HomePage = () => {
         ogType={metaTags.openGraph.type}
         ogUrl={metaTags.openGraph.url as `${'http://' | 'https://'}${string}`}
         ogContentUrl={metaTags.openGraph.image}
+        ogWidth="1200"
+        ogHeight="630"
       />
+      <Helmet>
+        <link rel="canonical" href={metaTags.canonical} />
+      </Helmet>
 
       <Hero eyebrow={HEADER.eyebrow} intro={HEADER.intro} />
       {PROJECTS.map((project, index) => (

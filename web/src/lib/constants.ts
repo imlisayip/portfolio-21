@@ -6,7 +6,7 @@ export const SITE_CONFIG = {
   author: 'Lisa Yip',
   url: 'https://lisayip.com',
   siteName: 'Lisa Yip Portfolio',
-  image: 'https://lisayip.com/images/lisa-yip-profile.jpg',
+  image: 'https://lisayip.com/images/og-image.jpg',
   themeColor: '#f5f5dc'
 }
 

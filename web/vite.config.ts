@@ -12,8 +12,7 @@ dns.setDefaultResultOrder('verbatim')
 const viteConfig: UserConfig = {
   plugins: [redwood()],
   build: {
-    // Enable source maps for production builds
-    sourcemap: true,
+    sourcemap: false,
     chunkSizeWarningLimit: 1000
   },
   server: {

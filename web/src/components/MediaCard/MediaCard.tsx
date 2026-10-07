@@ -22,12 +22,14 @@ const MediaCard = React.memo(({
   image,
   alt,
 }: MediaCardProps) => {
+  const headingId = React.useId()
+
   return (
     <article
       className={`my-16 flex flex-col justify-center   ${
         direction === 'left' ? 'md:flex-row' : 'md:flex-row-reverse'
       }`}
-      aria-labelledby={`project-heading`}
+      aria-labelledby={headingId}
     >
       <div className={`max-w-4xl pb-6 md:w-6/12  lg:w-8/12`}>
         <a
@@ -55,11 +57,11 @@ const MediaCard = React.memo(({
           direction === 'left' ? '' : 'md:text-right'
         }`}
       >
-        <h2 id={`project-heading`} className="pb-6 text-lgm md:text-lgt lg:text-lgd">{heading}</h2>
+        <h2 id={headingId} className="pb-6 text-lgm md:text-lgt lg:text-lgd">{heading}</h2>
         <div
           dangerouslySetInnerHTML={{ __html: body }}
           className="pb-6 sm:pb-3.5 font-body"
-          aria-describedby={`project-heading`}
+          aria-describedby={headingId}
         />
         <TextStyler link={ctaLink} caret highlight>
           {cta}

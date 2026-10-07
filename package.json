@@ -37,10 +37,11 @@
   },
   "packageManager": "yarn@4.9.2",
   "dependencies": {
+    "@apollo/client": "^3.7.1",
     "@babel/core": "^7.28.0",
     "@vercel/analytics": "^1.2.0",
     "babel-plugin-graphql-tag": "^3.3.0",
-    "graphql": "^16.11.0",
+    "graphql": "^16.9.0",
     "graphql-tag": "^2.12.6"
   }
 }
