@@ -34,9 +34,8 @@ class ErrorBoundary extends React.Component<
     return { hasError: true }
   }
 
-  componentDidCatch(error: Error, errorInfo: React.ErrorInfo) {
+  componentDidCatch() {
     // Silently handle SpeedInsights errors
-    console.debug('SpeedInsights error handled:', error)
   }
 
   render() {

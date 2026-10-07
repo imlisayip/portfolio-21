@@ -2,31 +2,6 @@ import { hydrateRoot, createRoot } from 'react-dom/client'
 
 import App from './App'
 
-// Register service worker with modern APIs
-if ('serviceWorker' in navigator) {
-  // Use 'DOMContentLoaded' instead of 'load' to avoid potential unload issues
-  if (document.readyState === 'loading') {
-    document.addEventListener('DOMContentLoaded', () => {
-      navigator.serviceWorker.register('/sw.js')
-        .then((registration) => {
-          console.log('SW registered: ', registration)
-        })
-        .catch((registrationError) => {
-          console.log('SW registration failed: ', registrationError)
-        })
-    })
-  } else {
-    // Document is already loaded
-    navigator.serviceWorker.register('/sw.js')
-      .then((registration) => {
-        console.log('SW registered: ', registration)
-      })
-      .catch((registrationError) => {
-        console.log('SW registration failed: ', registrationError)
-      })
-  }
-}
-
 /**
  * When `#redwood-app` isn't empty then it's very likely that you're using
  * prerendering. So React attaches event listeners to the existing markup

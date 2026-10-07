@@ -25,33 +25,20 @@ const Nav = ({ isOpen, toggleHamburger }) => {
             LY
           </Link>
         </h3>
-        <div
-          className="cursor-pointer md:hidden"
+        <button
+          className={`cursor-pointer md:hidden hamburger hamburger--elastic ${
+            isOpen ? 'is-active' : ''
+          }`}
           onClick={toggleHamburger}
-          onKeyDown={(e) => {
-            if (e.key === 'Enter' || e.key === ' ') {
-              e.preventDefault()
-              toggleHamburger()
-            }
-          }}
-          tabIndex={0}
-          role="button"
+          type="button"
           aria-label="Toggle navigation menu"
           aria-expanded={isOpen}
           aria-controls="mobile-menu"
         >
-          <button
-            className={`hamburger hamburger--elastic ${
-              isOpen ? 'is-active' : ''
-            }`}
-            type="button"
-            aria-label="Menu"
-          >
-            <span className="hamburger-box">
-              <span className="hamburger-inner"></span>
-            </span>
-          </button>
-        </div>
+          <span className="hamburger-box">
+            <span className="hamburger-inner"></span>
+          </span>
+        </button>
         <div className="hidden md:block">
           <h3>
             <Link className="p-4 font-heading" to="/">
