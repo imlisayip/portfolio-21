@@ -12,6 +12,7 @@ This is the personal portfolio website of Lisa Yip, a Front End Engineer based i
 
 ## Content Summary
 Lisa Yip is a Front End Engineer with experience at notable companies including:
+- Rippling (Sava internal design system)
 - Instrument (Nike Year in Review project)
 - FullStory (Heatmaps and Journey Maps products)
 - Patreon (Creativity Over Everything campaign and Product rebrand)
@@ -26,13 +27,13 @@ Lisa Yip is a Front End Engineer with experience at notable companies including:
 
 ## Key Projects Featured
 1. Nike Year in Review - React, i18n, design system
-2. Salesforce Dreamforce 2023 - HTML, SCSS, JavaScript, AEM
+2. Salesforce Dreamforce 2023 - HTML, SCSS, JavaScript, AEM (archived link)
 3. FullStory Heatmaps - React, TypeScript, Go
 4. FullStory Journey Maps - React, TypeScript, Go
 5. Patreon Creativity Over Everything - React, Parcel.js
 6. Patreon Product - React, Python
-7. Dropbox Work in Progress - JavaScript, HTML5/CSS3, AEM
-8. Dropbox Transparency - D3.js, HTML5/CSS3, AEM
+7. Dropbox Work in Progress - JavaScript, HTML5/CSS3, AEM (archived link)
+8. Dropbox Transparency - D3.js, HTML5/CSS3, AEM (archived link)
 
 ## Professional Background
 - Front End Engineer with focus on user experience

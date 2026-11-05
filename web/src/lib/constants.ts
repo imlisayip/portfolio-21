@@ -1,7 +1,7 @@
 // SEO and Meta Information
 export const SITE_CONFIG = {
   title: 'Lisa Yip - Front End Engineer',
-  description: 'Front End Engineer with experience at Instrument, FullStory, Patreon, and Dropbox. Specializing in React, TypeScript, and creating impactful user experiences.',
+  description: 'Front End Engineer with experience at Rippling, Instrument, FullStory, Patreon, and Dropbox. Specializing in React, TypeScript, and creating impactful user experiences.',
   keywords: 'front end engineer, react developer, typescript, user experience, web development, lisa yip',
   author: 'Lisa Yip',
   url: 'https://lisayip.com',
@@ -13,7 +13,7 @@ export const SITE_CONFIG = {
 // Professional Information
 export const PROFESSIONAL_INFO = {
   title: 'Front End Engineer',
-  companies: ['Instrument', 'FullStory', 'Patreon', 'Dropbox'],
+  companies: ['Rippling', 'Instrument', 'FullStory', 'Patreon', 'Dropbox'],
   skills: ['React', 'TypeScript', 'JavaScript', 'HTML/CSS'],
   focus: 'creating impactful user experiences',
   location: 'San Francisco, CA'

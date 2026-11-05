@@ -8,7 +8,7 @@ import { PROFILE } from '../../lib/data'
 const AboutPage = () => {
   const metaTags = generatePageMetaTags(
     'About Lisa Yip',
-    'Learn more about Lisa Yip, a Front End Engineer with experience at Instrument, FullStory, Patreon, and Dropbox. Discover her background, accomplishments, and passion for creating meaningful user experiences.',
+    'Learn more about Lisa Yip, a Front End Engineer with experience at Rippling, Instrument, FullStory, Patreon, and Dropbox. Discover her background, accomplishments, and passion for creating meaningful user experiences.',
     '/about'
   )
 

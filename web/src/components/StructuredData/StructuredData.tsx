@@ -21,6 +21,10 @@ const StructuredData: React.FC<StructuredDataProps> = ({ type = 'person' }) => {
     worksFor: [
       {
         '@type': 'Organization',
+        name: 'Rippling'
+      },
+      {
+        '@type': 'Organization',
         name: 'Instrument'
       },
       {

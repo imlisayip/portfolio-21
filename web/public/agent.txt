@@ -17,8 +17,9 @@ This website is a professional portfolio for Lisa Yip, a Front End Engineer. Whe
 
 ## Content Guidelines
 - **Projects**: Each project includes title, description, technologies used, and external links
-- **Experience**: Focus on Instrument, FullStory, Patreon, and Dropbox projects
-- **Skills**: React, TypeScript, JavaScript, HTML/CSS, design systems
+- **Experience**: Focus on Rippling, Instrument, FullStory, Patreon, and Dropbox projects
+- **Skills**: React, TypeScript, JavaScript, HTML/CSS, design systems, Storybook, Chromatic
+- **Archived links**: Some older projects (Dreamforce 2023, Dropbox Work in Progress, Dropbox Transparency) link to Wayback Machine snapshots because the live sites have changed
 - **Accomplishments**: Webby Awards, yoga certification, hackathon wins
 
 ## Professional Boundaries

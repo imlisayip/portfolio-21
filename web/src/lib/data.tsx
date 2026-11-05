@@ -31,14 +31,15 @@ export const PROJECTS = [
     cta: 'Visit case study',
     ctaLink: 'https://www.instrument.com/work/nike-year-in-review',
     image: YIR,
-    alt: 'Screenshot of 2023 Salesforce Dreamforce Home page',
+    alt: 'Screenshot of Nike Year in Review experience',
   },
   {
     title: 'Dreamforce 2023',
     description:
       "At Salesforce's Dreamforce 2023 conference, the focus lies in AI, Data, and CRM fusion, offering insights into AI-driven innovation for faster data-based decisions. Responsibilities included <strong>leading website enhancement, assuming leadership following a colleague's departure, supporting dynamic client needs, resolving legacy code complexities, and managing dynamic web elements and content</strong> utilizing HTML, SCSS, JavaScript, and Adobe Experience Manager (AEM).",
-    cta: 'Visit site',
-    ctaLink: 'https://www.dreamforce.com/',
+    cta: 'View archived version',
+    ctaLink:
+      'https://web.archive.org/web/20230913155704/https://www.salesforce.com/dreamforce/?bc=WA',
     image: SalesforceDreamforce,
     alt: 'Screenshot of 2023 Salesforce Dreamforce Home page',
     direction: 'right',
@@ -75,7 +76,7 @@ export const PROJECTS = [
     title: 'Patreon Product',
     description:
       'Patreon is a membership platform that makes it easy for artists and creators to get paid. Worked with the team to <strong>rebrand Patreon App Directory to add value to patrons with tools, benefits, and perks</strong>. Built website using React, Python.',
-    cta: 'Visit site',
+    cta: 'Visit current site',
     ctaLink: 'https://www.patreon.com/product/premium',
     image: Product,
     alt: 'Screenshot of Patreon Product webpage',
@@ -85,8 +86,9 @@ export const PROJECTS = [
     title: ' Dropbox Work In Progress',
     description:
       '<strong>Webby Award winning Dropbox Work in Progress Blogs</strong>, designed to communicate company updates and perspective. <strong>Worked closely with shareholders to launch under two month window with rebrand and migration</strong>. Built with Javascript, HTML5/CSS3, AEM.',
-    cta: 'Visit site',
-    ctaLink: 'https://blog.dropbox.com/',
+    cta: 'View archived version',
+    ctaLink:
+      'https://web.archive.org/web/20201117233001/https://blog.dropbox.com/',
     image: WorkInProgress,
     alt: 'Screenshot of Dropbox blogs webpage',
   },
@@ -94,8 +96,9 @@ export const PROJECTS = [
     title: 'Dropbox Transparency',
     description:
       'Dropbox is a modern workspace designed to reduce busywork-so you can focus on the things that matter. Site focused on being <strong>transparent about how government requests for user data is handled</strong>. Project built using <strong>D3.js, HTML5/CSS3 and AEM.</strong>',
-    cta: 'Visit site',
-    ctaLink: 'https://www.dropbox.com/transparency',
+    cta: 'View archived version',
+    ctaLink:
+      'https://web.archive.org/web/20221202094717/https://help.dropbox.com/transparency',
     image: Transparency,
     alt: 'Screenshot of Dropbox transparency webpage',
     direction: 'right',
@@ -108,8 +111,10 @@ export const PROFILE = {
     `Hello! Thanks for dropping by. I'm a Front End Engineer actively on the
         lookout for new and exciting opportunities. I enjoy creating meaningful
         work that packs communication within a snapshot.`,
-    `Previously, I've had the privilege of crafting digital brand experiences
-        at Instrument, FullStory, Patreon, and Dropbox.`,
+    `Today, I'm a frontend engineer at Rippling, where I help maintain the Sava
+        design system and build Next.js and Contentful-powered pages for the
+        marketing site. Previously, I crafted digital brand experiences at
+        Instrument, FullStory, Patreon, and Dropbox.`,
     `My experience includes helping organizations establish the building
         blocks for a robust design system. I'm passionate about the creative
         process, and I believe that empathy, innovation, and teamwork are key
